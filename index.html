@@ -245,28 +245,64 @@
       }
       .nav-overlay.open{display:block}
     }
+    /* ---- LANG SWITCHER ---- */
+    .lang-switcher{
+      display:flex;align-items:center;gap:4px;flex:0 0 auto;margin-left:8px;
+    }
+    .lang-sep{color:rgba(196,147,42,.5);font-size:11px;line-height:1}
+    .lang-btn{
+      background:none;border:none;padding:4px 6px;
+      font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+      color:var(--navy);cursor:pointer;position:relative;padding-bottom:5px;
+      transition:color .15s ease;
+    }
+    .lang-btn[data-lang-btn="darija"]{
+      font-family:system-ui,sans-serif;letter-spacing:0;font-size:12px;text-transform:none;
+    }
+    html[data-ui-lang="darija"] [data-lang]{
+      font-family:system-ui,"Segoe UI",Tahoma,Arial,sans-serif;
+    }
+    .lang-btn.active{color:var(--gold)}
+    .lang-btn.active::after{
+      content:"";position:absolute;bottom:0;left:6px;right:6px;height:1px;background:var(--gold);
+    }
+    .lang-btn:hover{color:var(--gold)}
+    @media (max-width:820px){
+      .lang-switcher{margin-left:0;margin-right:8px}
+    }
   </style>
 
-  <div class="announce" role="banner">
+  <div class="announce" role="banner" data-lang
+    data-en="Delivery in 24–72h across Morocco <span class=&quot;dot&quot;>✦</span> Cash on delivery"
+    data-fr="Livraison sous 24 à 72 h partout au Maroc <span class=&quot;dot&quot;>✦</span> Paiement à la livraison"
+    data-darija="التوصيل فـ 24 حتال 72 ساعة فجميع البلاد <span class=&quot;dot&quot;>✦</span> الدفع عند الاستلام">
     Delivery in 24–72h across Morocco <span class="dot">✦</span> Cash on delivery
   </div>
 
   <header class="navbar" id="navbar">
-    <nav class="navbar-inner" aria-label="Main navigation">
+    <nav class="navbar-inner" data-aria-en="Main navigation" data-aria-fr="Navigation principale" data-aria-darija="القائمة الرئيسية" aria-label="Main navigation">
 
-      <a class="nav-logo" href="#" aria-label="SAHRI BEAUTY — Home">
+      <a class="nav-logo" href="#" data-aria-en="SAHRI BEAUTY — Home" data-aria-fr="SAHRI BEAUTY — Accueil" data-aria-darija="SAHRI BEAUTY — الرئيسية" aria-label="SAHRI BEAUTY — Home">
         <img src="uploads/logo SAHri.webp" alt="SAHRI BEAUTY" />
       </a>
 
       <ul class="nav-links" id="nav-links" role="list">
-        <li><a href="#bundles-section">Shop</a></li>
-        <li><a href="#how">How to Use</a></li>
-        <li><a href="#story">Our Story</a></li>
-        <li><a href="#order" class="nav-cta">Order Now</a></li>
+        <li><a href="#bundles-section" data-lang data-en="Shop" data-fr="Boutique" data-darija="تسوّق">Shop</a></li>
+        <li><a href="#how" data-lang data-en="How to Use" data-fr="Mode d’emploi" data-darija="كيفاش تستعملوها">How to Use</a></li>
+        <li><a href="#story" data-lang data-en="Our Story" data-fr="Notre histoire" data-darija="حكايتنا">Our Story</a></li>
+        <li><a href="#order" class="nav-cta" data-lang data-en="DM us to order" data-fr="Écrivez-nous pour commander" data-darija="راسلونا باش تطلبو">DM us to order</a></li>
       </ul>
 
+      <div class="lang-switcher" role="group" data-aria-en="Language selector" data-aria-fr="Sélecteur de langue" data-aria-darija="اختيار اللغة" aria-label="Language selector">
+        <button class="lang-btn active" data-lang-btn="en" aria-pressed="true">EN</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang-btn="fr" aria-pressed="false">FR</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang-btn="darija" aria-pressed="false">الدارجة</button>
+      </div>
+
       <div class="nav-overlay" id="nav-overlay"></div>
-      <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <button class="nav-burger" id="nav-burger" data-aria-en="Open menu" data-aria-fr="Ouvrir le menu" data-aria-darija="فتح القائمة" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
@@ -415,10 +451,10 @@
   <section class="hero">
     <div class="hero-grid">
       <div class="hero-media">
-        <div class="hero-badge" aria-label="New 2026 batch">
+        <div class="hero-badge" data-aria-en="New 2026 batch" data-aria-fr="Nouveau lot 2026" data-aria-darija="دفعة جديدة 2026" aria-label="New 2026 batch">
           <div class="arc"></div>
           <div class="num">N°1</div>
-          <div class="tag">Dakhla<br>Origin</div>
+          <div class="tag" data-lang data-lang-html data-en="Dakhla<br>Origin" data-fr="Dakhla<br>Provenance" data-darija="Dakhla<br>من الدار">Dakhla<br>Origin</div>
         </div>
         <div class="frame hero-frame">
           <span class="corner tl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
@@ -427,54 +463,54 @@
           <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
           <span class="ornament-strip top"><svg><use href="#diamond"/></svg></span>
           <span class="ornament-strip bot"><svg><use href="#diamond"/></svg></span>
-          <img id="product-img" src="sahri porduct design.png" alt="SAHRI BEAUTY Nila Powder — Moroccan hammam setting" fetchpriority="high" decoding="async" />
+          <img id="product-img" src="sahri porduct design.png" alt="SAHRI BEAUTY Nila Powder — Moroccan hammam setting" fetchpriority="high" decoding="async" data-lang data-en="SAHRI BEAUTY Nila Powder — Moroccan hammam setting" data-fr="SAHRI BEAUTY — Poudre Nila, ambiance hammam marocaine" data-darija="SAHRI BEAUTY — مسحوق Nila فالحمام المغربي" />
         </div>
         <div class="frame hero-sidekick">
           <span class="corner tl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
           <span class="corner tr"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
           <span class="corner bl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
           <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <img src="Shri product.png" alt="SAHRI BEAUTY Nila jar — studio shot" loading="lazy" decoding="async" />
+          <img src="Shri product.png" alt="SAHRI BEAUTY Nila jar — studio shot" loading="lazy" decoding="async" data-lang data-en="SAHRI BEAUTY Nila jar — studio shot" data-fr="SAHRI BEAUTY — pot Nila, photo studio" data-darija="SAHRI BEAUTY — مرطبان Nila فالستوديو" />
         </div>
       </div>
 
       <div class="hero-copy">
-        <div class="eyebrow">From the Sahara, for your skin</div>
-        <h1>Nila Brightening<br><em>Powder</em></h1>
+        <div class="eyebrow" data-lang data-en="From the Sahara, for your skin" data-fr="Du Sahara, pour votre peau" data-darija="من الصحرا، لجلد ديالك">From the Sahara, for your skin</div>
+        <h1 data-lang data-lang-html data-en="Nila Brightening<br><em>Powder</em>" data-fr="Nila Brightening<br><em>Poudre éclaircissante</em>" data-darija="Nila Brightening<br><em>مسحوق يبيّض وزين</em>">Nila Brightening<br><em>Powder</em></h1>
 
         <div class="hero-meta">
-          <span>Dakhla · Morocco</span><span class="sep"></span>
-          <span>100g</span><span class="sep"></span>
-          <span>Pure Indigo</span>
+          <span data-lang data-en="Dakhla · Morocco" data-fr="Dakhla · Maroc" data-darija="Dakhla · المغرب">Dakhla · Morocco</span><span class="sep"></span>
+          <span data-lang data-en="100g" data-fr="100 g" data-darija="100 غ">100g</span><span class="sep"></span>
+          <span data-lang data-en="Pure Indigo" data-fr="Indigo pur" data-darija="Nila نقية بالطبيعي">Pure Indigo</span>
         </div>
 
-        <div class="hero-stars" aria-label="Rated 5 out of 5">
+        <div class="hero-stars" data-aria-en="Rated 5 out of 5" data-aria-fr="Noté 5 sur 5" data-aria-darija="تقييم 5 من 5" aria-label="Rated 5 out of 5">
           <span aria-hidden="true">★ ★ ★ ★ ★</span>
-          <small>Rated 5/5 by our customers</small>
+          <small data-lang data-en="Rated 5/5 by our customers" data-fr="Noté 5/5 par nos clientes" data-darija="تقييم 5/5 من طرف الزبناء">Rated 5/5 by our customers</small>
         </div>
 
-        <p class="pitch">
-          The nila Sahrawi women have used for centuries — exactly as it comes from the source.
-          No additives. No intermediaries.”
+        <p class="pitch" data-lang data-en="The Nila Sahrawi women have used for centuries — exactly as it comes from the source. No additives. No intermediaries." data-fr="La Nila que les femmes sahraouies utilisent depuis des siècles, telle qu’elle sort de la source. Sans additifs. Sans intermédiaires." data-darija="Nila اللي كيديرو بيها الصحراويات من قرون، كيفما كاتجي من عند المصدر مباشرة. مافيهاش زوائد، مافيش وسيط بيناتكم وبينها.">
+          The Nila Sahrawi women have used for centuries — exactly as it comes from the source.
+          No additives. No intermediaries.
         </p>
 
         <div class="hero-price">
-          <span class="from">From</span>
+          <span class="from" data-lang data-en="From" data-fr="À partir de" data-darija="من">From</span>
           <span class="v">199<span class="unit">MAD</span></span>
-          <span class="strike">398 MAD / 2 jars</span>
+          <span class="strike" data-lang data-en="398 MAD / 2 jars" data-fr="398 MAD / 2 pots" data-darija="398 درهم / جوج مراتب">398 MAD / 2 jars</span>
         </div>
 
         <div class="hero-actions">
-          <button class="btn-primary" type="button" data-cta="bundle">
-            Order Now <span class="arrow">→</span>
+          <button class="btn-primary" type="button" data-cta="bundle" data-lang data-lang-html data-en="DM us to order <span class=&quot;arrow&quot;>→</span>" data-fr="Écrivez-nous pour commander <span class=&quot;arrow&quot;>→</span>" data-darija="راسلونا باش تطلبو <span class=&quot;arrow&quot;>→</span>">
+            DM us to order <span class="arrow">→</span>
           </button>
-          <a class="btn-ghost" href="#story">Our Story</a>
+          <a class="btn-ghost" href="#story" data-lang data-en="Our Story" data-fr="Notre histoire" data-darija="حكايتنا">Our Story</a>
         </div>
 
         <div class="hero-trust">
-          <span><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7"/></svg> Delivery in 24–72h</span>
-          <span><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="7" width="18" height="12"/><circle cx="12" cy="13" r="2.5"/></svg> Cash on delivery</span>
-          <span><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21c0-7 4-12 9-13-1 8-5 13-9 13zM12 21c0-7-4-12-9-13 1 8 5 13 9 13z"/></svg> 100% natural</span>
+          <span><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7"/></svg> <span data-lang data-en="Delivery in 24–72h" data-fr="Livraison en 24–72 h" data-darija="توصيل فـ 24–72 ساعة">Delivery in 24–72h</span></span>
+          <span><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="7" width="18" height="12"/><circle cx="12" cy="13" r="2.5"/></svg> <span data-lang data-en="Cash on delivery" data-fr="Paiement à la livraison" data-darija="الدفع عند الاستلام">Cash on delivery</span></span>
+          <span><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21c0-7 4-12 9-13-1 8-5 13-9 13zM12 21c0-7-4-12-9-13 1 8 5 13 9 13z"/></svg> <span data-lang data-en="100% natural" data-fr="100 % naturel" data-darija="100% طبيعي">100% natural</span></span>
         </div>
       </div>
     </div>
@@ -518,26 +554,26 @@
       .benefit:nth-child(3),.benefit:nth-child(4){border-bottom:0}
     }
   </style>
-  <div class="benefits" aria-label="Benefits">
+  <div class="benefits" data-aria-en="Benefits" data-aria-fr="Bienfaits" data-aria-darija="الفوائد" aria-label="Benefits">
     <div class="benefit">
       <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3"/><circle cx="12" cy="12" r="4"/></svg></div>
-      <div class="label">Brightening</div>
-      <div class="sub">Even, luminous skin</div>
+      <div class="label" data-lang data-en="Brightening" data-fr="Éclat" data-darija="تفتيح">Brightening</div>
+      <div class="sub" data-lang data-en="Even, luminous skin" data-fr="Peau unifiée et lumineuse" data-darija="جلد موحّد ومزيان يلمع">Even, luminous skin</div>
     </div>
     <div class="benefit">
       <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="9" cy="9" r="2"/><circle cx="16" cy="14" r="1.4"/><circle cx="8" cy="16" r="1.2"/><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/></svg></div>
-      <div class="label">Dark Spots</div>
-      <div class="sub">Fades hyperpigmentation</div>
+      <div class="label" data-lang data-en="Dark Spots" data-fr="Taches brunes" data-darija="البقع">Dark Spots</div>
+      <div class="sub" data-lang data-en="Fades hyperpigmentation" data-fr="Atténue l’hyperpigmentation" data-darija="كيهوّن التسبغات على وجهك">Fades hyperpigmentation</div>
     </div>
     <div class="benefit">
       <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10z"/></svg></div>
-      <div class="label">Soothing</div>
-      <div class="sub">Calms inflammation</div>
+      <div class="label" data-lang data-en="Soothing" data-fr="Apaisant" data-darija="مهدّي">Soothing</div>
+      <div class="sub" data-lang data-en="Calms inflammation" data-fr="Calme les irritations" data-darija="كيهدّي الاحمرار واللهيبة">Calms inflammation</div>
     </div>
     <div class="benefit">
       <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 12c4 0 4-6 9-6s5 6 9 6-4 6-9 6-5-6-9-6z"/><circle cx="12" cy="12" r="2"/></svg></div>
-      <div class="label">Exfoliating</div>
-      <div class="sub">Gentle daily renewal</div>
+      <div class="label" data-lang data-en="Exfoliating" data-fr="Exfoliant doux" data-darija="تقشير خفيف">Exfoliating</div>
+      <div class="sub" data-lang data-en="Gentle daily renewal" data-fr="Renouvellement doux du teint" data-darija="كيجدّد الجلد بالراحة">Gentle daily renewal</div>
     </div>
   </div>
 
@@ -566,9 +602,9 @@
     .origin-banner .coords .ln{width:30px;height:1px;background:var(--gold-pale)}
     @media (max-width:560px){.origin-banner h2{font-size:38px}}
   </style>
-  <section class="origin-banner" aria-label="Sourced in Dakhla">
-    <div class="kicker">Sourced at origin</div>
-    <h2>From the dunes of <em>Dakhla</em><br>to your dressing table.</h2>
+  <section class="origin-banner" data-aria-en="Sourced in Dakhla" data-aria-fr="Sourcée à Dakhla" data-aria-darija="من دخلة" aria-label="Sourced in Dakhla">
+    <div class="kicker" data-lang data-en="Sourced at origin" data-fr="À la source" data-darija="من عند المصدر">Sourced at origin</div>
+    <h2 data-lang data-lang-html data-en="From the dunes of <em>Dakhla</em><br>to your dressing table." data-fr="Des dunes de <em>Dakhla</em><br>jusqu’à votre coiffeuse." data-darija="من رمال <em>Dakhla</em><br>حتى لطاولة الزين ديالك.">From the dunes of <em>Dakhla</em><br>to your dressing table.</h2>
     <div class="coords"><span class="ln"></span> 23.6848° N · 15.9579° W <span class="ln"></span></div>
   </section>
 
@@ -666,30 +702,30 @@
   </style>
   <section class="bundles-section" id="bundles-section">
     <div class="section-title">
-      <div class="kicker">Choose your pack</div>
-      <h2>Select your <em>ritual</em></h2>
+      <div class="kicker" data-lang data-en="Choose your pack" data-fr="Choisissez votre coffret" data-darija="اختارو الباك ديالكم">Choose your pack</div>
+      <h2 data-lang data-lang-html data-en="Select your <em>ritual</em>" data-fr="Composez votre <em>rituel</em>" data-darija="اختارو <em>العادة</em> ديالكم">Select your <em>ritual</em></h2>
       <div class="ornament"><span class="ln"></span><svg><use href="#diamond"/></svg><span class="ln"></span></div>
-      <p class="lede">All packs ship from Casablanca with free delivery across Morocco. Pay on delivery.</p>
+      <p class="lede" data-lang data-en="All packs ship from Casablanca with free delivery across Morocco. Pay on delivery." data-fr="Tous les coffrets partent de Casablanca, livraison gratuite partout au Maroc. Paiement à la livraison." data-darija="كاع الباكات كتخرج من الدار البيضاء، التوصيل مجاني فجميع البلاد. تخلصي غير فالمكان.">All packs ship from Casablanca with free delivery across Morocco. Pay on delivery.</p>
     </div>
 
     <div class="bundles-layout">
-    <div class="bundles" id="bundles" role="radiogroup" aria-label="Select pack">
-      <div class="bundle" data-id="single" data-name="1 Jar" data-price="199" data-units="1" role="radio" aria-checked="false" tabindex="0">
+    <div class="bundles" id="bundles" role="radiogroup" data-aria-en="Select pack" data-aria-fr="Choisir un coffret" data-aria-darija="اختار الباك" aria-label="Select pack">
+      <div class="bundle" data-id="single" data-name-en="1 Jar" data-name-fr="1 pot" data-name-darija="علبة وحدة" data-price="199" data-units="1" role="radio" aria-checked="false" tabindex="0">
         <div class="radio" aria-hidden="true"></div>
         <div class="info">
-          <div class="name">1 Jar</div>
-          <div class="meta">100g · Try it first</div>
+          <div class="name" data-lang data-lang-html data-en="1 Jar" data-fr="1 pot" data-darija="علبة وحدة">1 Jar</div>
+          <div class="meta" data-lang data-en="100g · Try it first" data-fr="100 g · Pour essayer" data-darija="100 غ · جرّبها الأول">100g · Try it first</div>
         </div>
         <div class="price"><span>199 MAD</span></div>
       </div>
 
-      <div class="bundle selected" data-id="double" data-name="2 Jars" data-price="319" data-units="2" role="radio" aria-checked="true" tabindex="0">
-        <div class="badge">Most Popular</div>
+      <div class="bundle selected" data-id="double" data-name-en="2 Jars" data-name-fr="2 pots" data-name-darija="جوج مراتب" data-price="319" data-units="2" role="radio" aria-checked="true" tabindex="0">
+        <div class="badge" data-lang data-en="Most Popular" data-fr="Le plus populaire" data-darija="الأكثر طلبًا">Most Popular</div>
         <div class="radio" aria-hidden="true"></div>
         <div class="info">
-          <div class="name">2 Jars</div>
-          <div class="meta">200g · One for you, one to share</div>
-          <div class="save">Save 79 MAD</div>
+          <div class="name" data-lang data-lang-html data-en="2 Jars" data-fr="2 pots" data-darija="جوج مراتب">2 Jars</div>
+          <div class="meta" data-lang data-en="200g · One for you, one to share" data-fr="200 g · Pour vous et à offrir" data-darija="200 غ · وحدة ليك وحدة لصاحبك">200g · One for you, one to share</div>
+          <div class="save" data-lang data-en="Save 79 MAD" data-fr="Économisez 79 MAD" data-darija="تربحي 79 درهم">Save 79 MAD</div>
         </div>
         <div class="price">
           <span class="strike">398 MAD</span>
@@ -697,12 +733,12 @@
         </div>
       </div>
 
-      <div class="bundle" data-id="trio" data-name="3 Jars + Free Rose Water" data-price="498" data-units="3" role="radio" aria-checked="false" tabindex="0">
+      <div class="bundle" data-id="trio" data-name-en="3 Jars + Free Rose Water" data-name-fr="3 pots + eau de rose offerte" data-name-darija="3 مراتب + ماء ورد هدية" data-price="498" data-units="3" role="radio" aria-checked="false" tabindex="0">
         <div class="radio" aria-hidden="true"></div>
         <div class="info">
-          <div class="name">3 Jars <span style="font-size:14px;color:var(--gold);font-style:italic">+ Free Rose Water</span></div>
-          <div class="meta">300g · Full ritual set</div>
-          <div class="save">Includes 100ml rose water bottle — free</div>
+          <div class="name" data-lang data-lang-html data-en="3 Jars <span style=&quot;font-size:14px;color:var(--gold);font-style:italic&quot;>+ Free Rose Water</span>" data-fr="3 pots <span style=&quot;font-size:14px;color:var(--gold);font-style:italic&quot;>+ eau de rose offerte</span>" data-darija="3 مراتب <span style=&quot;font-size:14px;color:var(--gold);font-style:italic&quot;>+ ماء ورد هدية</span>">3 Jars <span style="font-size:14px;color:var(--gold);font-style:italic">+ Free Rose Water</span></div>
+          <div class="meta" data-lang data-en="300g · Full ritual set" data-fr="300 g · Rituel complet" data-darija="300 غ · باك كامل للعناية">300g · Full ritual set</div>
+          <div class="save" data-lang data-en="Includes 100ml rose water bottle — free" data-fr="Flacon d’eau de rose 100 ml inclus — offert" data-darija="فيه زجاجة ماء ورد 100 مل هدية معاه">Includes 100ml rose water bottle — free</div>
         </div>
         <div class="price">
           <span class="strike">597 MAD</span>
@@ -716,17 +752,17 @@
       <span class="corner tr"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
       <span class="corner bl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
       <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-      <img id="bundle-visual-img" src="uploads/bundle-2-jars.webp" alt="Selected bundle product image" loading="lazy" decoding="async" />
+      <img id="bundle-visual-img" src="uploads/bundle-2-jars.webp" alt="Selected bundle product image" loading="lazy" decoding="async" data-lang data-en="Selected bundle product image" data-fr="Image du coffret sélectionné" data-darija="صورة الباك اللي اختارتي" />
     </div>
     </div><!-- /.bundles-layout -->
 
     <div class="selected-summary" aria-live="polite">
-      <div class="lbl">Your total</div>
+      <div class="lbl" data-lang data-en="Your total" data-fr="Votre total" data-darija="المجموع ديالك">Your total</div>
       <div class="total"><span id="summary-price">319</span><span class="unit">MAD</span></div>
     </div>
 
-    <button class="cta-primary" id="cta-order" type="button">
-      Order Now <span class="arrow">→</span>
+    <button class="cta-primary" id="cta-order" type="button" data-lang data-lang-html data-en="DM us to order <span class=&quot;arrow&quot;>→</span>" data-fr="Écrivez-nous pour commander <span class=&quot;arrow&quot;>→</span>" data-darija="راسلونا باش تطلبو <span class=&quot;arrow&quot;>→</span>">
+      DM us to order <span class="arrow">→</span>
     </button>
   </section>
 
@@ -774,43 +810,43 @@
           <span class="corner tr"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
           <span class="corner bl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
           <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <img src="assets/nila-raw.jpg" alt="Raw nila stones — deep indigo, unprocessed" loading="lazy" decoding="async" />
+          <img src="assets/nila-raw.jpg" alt="Raw Nila stones — deep indigo, unprocessed" loading="lazy" decoding="async" data-lang data-en="Raw Nila stones — deep indigo, unprocessed" data-fr="Pierres de Nila brutes — indigo profond, non traitées" data-darija="حجيرات Nila خام — لونها غامق وحقيقي" />
         </div>
         <div class="frame">
           <span class="corner tl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
           <span class="corner tr"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
           <span class="corner bl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
           <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <img src="uploads/marketing-product-hero.webp" alt="SAHRI BEAUTY Nila jar — clean studio" loading="lazy" decoding="async" />
+          <img src="uploads/marketing-product-hero.webp" alt="SAHRI BEAUTY Nila jar — clean studio" loading="lazy" decoding="async" data-lang data-en="SAHRI BEAUTY Nila jar — clean studio" data-fr="SAHRI BEAUTY — pot Nila, studio épuré" data-darija="SAHRI BEAUTY — مرطبان Nila فالستوديو" />
         </div>
       </div>
       <div class="raw-copy">
-        <div class="eyebrow" style="color:var(--gold);font-size:10px;letter-spacing:.4em;text-transform:uppercase;margin-bottom:14px">The Difference</div>
-        <h2>Not all nila is <em>real nila.</em></h2>
-        <p class="lede">
-          The nila sold in most pharmacies is diluted, mixed, or substituted with grey clays.
-          Real nila from Dakhla is unmistakable — deep, vivid indigo. Never grey. Never brown.
+        <div class="eyebrow" style="color:var(--gold);font-size:10px;letter-spacing:.4em;text-transform:uppercase;margin-bottom:14px" data-lang data-en="The Difference" data-fr="La différence" data-darija="شنو كيميّزنا">The Difference</div>
+        <h2 data-lang data-lang-html data-en="Not all Nila is <em>real Nila.</em>" data-fr="Toute Nila n’est pas une <em>vraie Nila.</em>" data-darija="ماشي كاع اللي كيقولو Nila هوا <em>Nila حقيقية.</em>">Not all Nila is <em>real Nila.</em></h2>
+        <p class="lede" data-lang data-en="The Nila sold in most pharmacies is diluted, mixed, or substituted with grey clays. Real Nila from Dakhla is unmistakable — deep, vivid indigo. Never grey. Never brown." data-fr="La Nila vendue en pharmacie est souvent diluée, mélangée ou remplacée par des argiles grises. La vraie Nila de Dakhla se reconnaît tout de suite : un indigo profond et vivant. Jamais grise. Jamais brune." data-darija="Nila اللي كتلقاوها فالصيدليات كاتكون مخففة ولا مخلوطة ولا بالرمادي. أما Nila من دخلة كاتبان بلي هي هي — لونها غامق وواضح. ماشي رمادية، ماشي كحلة باش كدبو عليك.">
+          The Nila sold in most pharmacies is diluted, mixed, or substituted with grey clays.
+          Real Nila from Dakhla is unmistakable — deep, vivid indigo. Never grey. Never brown.
         </p>
         <ul class="raw-list">
           <li>
             <div class="mark">i</div>
             <div>
-              <h4>Stone, then powder</h4>
-              <p>Selected as whole raw stones from the cooperative, milled fresh in small batches.</p>
+              <h4 data-lang data-en="Stone, then powder" data-fr="Pierre, puis poudre" data-darija="حجرة، من بعد تتحن">Stone, then powder</h4>
+              <p data-lang data-en="Selected as whole raw stones from the cooperative, milled fresh in small batches." data-fr="Sélectionnées en pierres brutes auprès de la coopérative, moulues à la demande en petites séries." data-darija="كانتختار كحجيرات خام من التعاونية، وكانتطحن على مهل فكميات صغيرة.">Selected as whole raw stones from the cooperative, milled fresh in small batches.</p>
             </div>
           </li>
           <li>
             <div class="mark">ii</div>
             <div>
-              <h4>One ingredient. That's it.</h4>
-              <p>No fillers, no fragrance, no preservatives. Just pure milled indigo.</p>
+              <h4 data-lang data-en="One ingredient. That's it." data-fr="Un seul ingrédient. C’est tout." data-darija="مكوّن وحيد. سالينا.">One ingredient. That's it.</h4>
+              <p data-lang data-en="No fillers, no fragrance, no preservatives. Just pure milled indigo." data-fr="Sans charges, sans parfum, sans conservateurs. Juste de l’indigo pur moulu." data-darija="مافيهاش حشو، مافيهاش عطور، مافيهاش مواد حافظة. غير Nila نقية محكوكة.">No fillers, no fragrance, no preservatives. Just pure milled indigo.</p>
             </div>
           </li>
           <li>
             <div class="mark">iii</div>
             <div>
-              <h4>Tested at the source</h4>
-              <p>Each batch is verified for color depth and purity before it ever leaves Dakhla.</p>
+              <h4 data-lang data-en="Tested at the source" data-fr="Contrôlée à la source" data-darija="كانتختبر من عند المصدر">Tested at the source</h4>
+              <p data-lang data-en="Each batch is verified for color depth and purity before it ever leaves Dakhla." data-fr="Chaque lot est vérifié pour sa profondeur de couleur et sa pureté avant de quitter Dakhla." data-darija="كولشي دفعة كانتفحص على اللون والنقاوة قبل ما تخرج من دخلة.">Each batch is verified for color depth and purity before it ever leaves Dakhla.</p>
             </div>
           </li>
         </ul>
@@ -845,28 +881,28 @@
   </style>
   <section class="ritual" id="how">
     <div class="section-title">
-      <div class="kicker">The ritual</div>
-      <h2>Three steps, <em>once a week.</em></h2>
+      <div class="kicker" data-lang data-en="The ritual" data-fr="Le rituel" data-darija="العادة">The ritual</div>
+      <h2 data-lang data-lang-html data-en="Three steps, <em>once a week.</em>" data-fr="Trois gestes, <em>une fois par semaine.</em>" data-darija="ثلاث خطوات، <em>مرة فالسبوع.</em>">Three steps, <em>once a week.</em></h2>
       <div class="ornament"><span class="ln"></span><svg><use href="#diamond"/></svg><span class="ln"></span></div>
     </div>
     <div class="ritual-grid">
       <div class="ritual-card">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 9h14l-1 10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 9zM9 9V6a3 3 0 1 1 6 0v3"/></svg></span>
         <div class="num">01</div>
-        <h3>Mix</h3>
-        <p>Combine one teaspoon of Sahri nila with rose water until you form a smooth, deep-indigo paste. Let it bloom for a minute.</p>
+        <h3 data-lang data-en="Mix" data-fr="Mélanger" data-darija="خلط">Mix</h3>
+        <p data-lang data-en="Combine one teaspoon of SAHRI BEAUTY Nila with rose water until you form a smooth, deep-indigo paste. Let it bloom for a minute." data-fr="Mélangez une cuillère à café de Nila SAHRI BEAUTY avec de l’eau de rose jusqu’à obtenir une pâte lisse, d’un indigo profond. Laissez-la s’ouvrir une minute." data-darija="ديري معلقة صغيرة ديال Nila ديال SAHRI BEAUTY مع ماء الورد حتى يولي عجين ناعم ولونو غامق. خليها ترتاح دقيقة.">Combine one teaspoon of SAHRI BEAUTY Nila with rose water until you form a smooth, deep-indigo paste. Let it bloom for a minute.</p>
       </div>
       <div class="ritual-card">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 4c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10z"/><path d="M10 14c.5 1.5 1.5 2.5 3 3" stroke-linecap="round"/></svg></span>
         <div class="num">02</div>
-        <h3>Apply</h3>
-        <p>Sweep onto clean skin with a soft brush, in even strokes. Leave for 10 minutes — until the mask is touch-dry but still cool.</p>
+        <h3 data-lang data-en="Apply" data-fr="Appliquer" data-darija="دهن">Apply</h3>
+        <p data-lang data-en="Sweep onto clean skin with a soft brush, in even strokes. Leave for 10 minutes — until the mask is touch-dry but still cool." data-fr="Appliquez sur une peau nette avec un pinceau doux, en gestes réguliers. Laissez poser 10 minutes — jusqu’à ce que le masque soit sec au toucher mais encore frais." data-darija="دهنيها على وجهك نقي بفرشاة ناعمة، بخطوط مزيانة. خليها 10 دقايق — حتى تشوفي الماسك نشف شوية وما زال بارد.">Sweep onto clean skin with a soft brush, in even strokes. Leave for 10 minutes — until the mask is touch-dry but still cool.</p>
       </div>
       <div class="ritual-card">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span>
         <div class="num">03</div>
-        <h3>Reveal</h3>
-        <p>Rinse with lukewarm water. Pat dry. Skin looks brighter, smoother, more even-toned. Use two to three times a week.</p>
+        <h3 data-lang data-en="Reveal" data-fr="Révéler" data-darija="شطف">Reveal</h3>
+        <p data-lang data-en="Rinse with lukewarm water. Pat dry. Skin looks brighter, smoother, more even-toned. Use two to three times a week." data-fr="Rincez à l’eau tiède. Tamponnez délicatement. Le teint paraît plus lumineux, plus lisse, plus uniforme. Deux à trois fois par semaine." data-darija="غسليها بما سخون شوية. نشفيها برفق. الوجه كيبان أوضح وناعم وموحّد. ديريها جوج ولا ثلاث مرات فالسبوع.">Rinse with lukewarm water. Pat dry. Skin looks brighter, smoother, more even-toned. Use two to three times a week.</p>
       </div>
     </div>
   </section>
@@ -903,22 +939,22 @@
           <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
           <span class="ornament-strip top" style="background:var(--cream)"><svg><use href="#floret"/></svg></span>
           <span class="ornament-strip bot" style="background:var(--cream)"><svg><use href="#floret"/></svg></span>
-          <img src="ugc sahri.png" alt="Customer holding SAHRI BEAUTY jar" loading="lazy" decoding="async" />
+          <img src="ugc sahri.png" alt="Customer holding SAHRI BEAUTY jar" loading="lazy" decoding="async" data-lang data-en="Customer holding SAHRI BEAUTY jar" data-fr="Cliente tenant un pot SAHRI BEAUTY" data-darija="زبونة كتمسك مرطبان SAHRI BEAUTY" />
         </div>
       </div>
       <div class="feature-copy">
         <div class="stars">★ ★ ★ ★ ★</div>
-        <h2><span class="open">“</span>The first nila I have used that feels like the one my grandmother kept in a glass jar — deep, real, alive.</h2>
-        <p class="quote">After three weeks, my skin looks calmer and brighter. The little dark spots on my cheeks have faded. No drying, no irritation. It is exactly what it claims to be.</p>
+        <h2 data-lang data-lang-html data-en="<span class=&quot;open&quot;>“</span>The first Nila I have used that feels like the one my grandmother kept in a glass jar — deep, real, alive." data-fr="<span class=&quot;open&quot;>“</span>La première Nila qui me rappelle celle que ma grand-mère gardait dans un bocal — profonde, vraie, vivante." data-darija="<span class=&quot;open&quot;>“</span>أول Nila حسّيت بيها بحال اللي كانت جدّاتي كاتخبيها فمرطبان — غامقة، حقيقية، حيّة."><span class="open">“</span>The first Nila I have used that feels like the one my grandmother kept in a glass jar — deep, real, alive.</h2>
+        <p class="quote" data-lang data-en="After three weeks, my skin looks calmer and brighter. The little dark spots on my cheeks have faded. No drying, no irritation. It is exactly what it claims to be." data-fr="Après trois semaines, ma peau paraît plus apaisée et plus lumineuse. Les petites taches sur mes joues se sont estompées. Pas de dessèchement, pas d’irritation. C’est exactement ce qu’elle promet." data-darija="من بعد ثلاثة أسابيع، الوجه ولّى هادي ومزيان. البقع الصغار على الخدود بداو يطيو. ماشي نشف، ماشي كيحرق. هي هي اللي كيقولو عليها.">After three weeks, my skin looks calmer and brighter. The little dark spots on my cheeks have faded. No drying, no irritation. It is exactly what it claims to be.</p>
         <div class="author">
           <span class="rule"></span>
           <span class="name">Salma A.</span>
           <span class="city">Casablanca</span>
         </div>
         <div class="feature-stats">
-          <div class="feature-stat"><div class="v">98<em>%</em></div><div class="l">Would repurchase</div></div>
-          <div class="feature-stat"><div class="v">+14<em>d</em></div><div class="l">Visible results</div></div>
-          <div class="feature-stat"><div class="v">2,400<em>+</em></div><div class="l">Happy customers</div></div>
+          <div class="feature-stat"><div class="v">98<em>%</em></div><div class="l" data-lang data-en="Would repurchase" data-fr="Rachèteraient" data-darija="كايرجعو يشروها">Would repurchase</div></div>
+          <div class="feature-stat"><div class="v">+14<em>d</em></div><div class="l" data-lang data-en="Visible results" data-fr="Résultats visibles" data-darija="نتيجة بينا">Visible results</div></div>
+          <div class="feature-stat"><div class="v">2,400<em>+</em></div><div class="l" data-lang data-en="Happy customers" data-fr="Clientes satisfaites" data-darija="زبناء فرحانين">Happy customers</div></div>
         </div>
       </div>
     </div>
@@ -978,18 +1014,18 @@
         </div>
       </div>
       <div class="story-copy">
-        <div class="kicker">Our story</div>
-        <h2>Sourced at origin.<br><em>Nothing added.</em></h2>
-        <p class="body">
+        <div class="kicker" data-lang data-en="Our story" data-fr="Notre histoire" data-darija="حكايتنا">Our story</div>
+        <h2 data-lang data-lang-html data-en="Sourced at origin.<br><em>Nothing added.</em>" data-fr="À la source.<br><em>Rien n’est ajouté.</em>" data-darija="من عند المصدر.<br><em>ما زدنا والو.</em>">Sourced at origin.<br><em>Nothing added.</em></h2>
+        <p class="body" data-lang data-en="Most Moroccan beauty brands source their ingredients through distributors — sometimes from outside Morocco entirely. SAHRI BEAUTY is different. Our Nila comes directly from cooperatives on the Saharan Atlantic coast, in Dakhla. We know exactly where it comes from. You will too — every jar carries the batch number of the cooperative that milled it." data-fr="Beaucoup de maisons marocaines passent par des distributeurs — parfois même hors du Maroc. SAHRI BEAUTY, c’est autrement. Notre Nila arrive directement des coopératives de la côte atlantique saharienne, à Dakhla. Nous savons d’où elle vient. Vous le saurez aussi : chaque pot porte le numéro de lot de la coopérative qui l’a moulu." data-darija="بزاف ديال الماركات كيجيبو المكوّنات من وسطاء — وحتى من برا المغرب أحيانًا. SAHRI BEAUTY ماشي بحالهم. Nila ديالنا كاتجي مباشرة من التعاونيات على الساحل الصحراوي، من دخلة. كنعلمو منين جاية، ونتوما غادي تعرفو هي هي — كولشي مرطبان فيه رقم الدفعة ديال التعاونية اللي طحنتو.">
           Most Moroccan beauty brands source their ingredients through distributors — sometimes
-          from outside Morocco entirely. Sahri is different. Our nila comes directly from
+          from outside Morocco entirely. SAHRI BEAUTY is different. Our Nila comes directly from
           cooperatives on the Saharan Atlantic coast, in Dakhla. We know exactly where it comes
           from. You will too — every jar carries the batch number of the cooperative that milled it.
         </p>
-        <div class="origin">Dakhla · Saharan Atlantic Coast · Morocco</div>
+        <div class="origin" data-lang data-en="Dakhla · Saharan Atlantic Coast · Morocco" data-fr="Dakhla · Côte atlantique saharienne · Maroc" data-darija="Dakhla · الساحل الصحراوي · المغرب">Dakhla · Saharan Atlantic Coast · Morocco</div>
         <div class="story-signature">
           <div class="seal">S</div>
-          <div class="who">— Sahri Beauty<span class="role">Founded in Morocco · 2024</span></div>
+          <div class="who"><span data-lang data-en="— SAHRI BEAUTY" data-fr="— SAHRI BEAUTY" data-darija="— SAHRI BEAUTY">— SAHRI BEAUTY</span><span class="role" data-lang data-en="Founded in Morocco · 2024" data-fr="Fondée au Maroc · 2024" data-darija="تأسست فالمغرب · 2024">Founded in Morocco · 2024</span></div>
         </div>
       </div>
     </div>
@@ -1047,60 +1083,60 @@
   </style>
   <section class="order" id="order">
     <div class="section-title">
-      <div class="kicker">Cash on delivery</div>
-      <h2>Place your <em>order</em></h2>
+      <div class="kicker" data-lang data-en="Cash on delivery" data-fr="Paiement à la livraison" data-darija="الدفع عند الاستلام">Cash on delivery</div>
+      <h2 data-lang data-lang-html data-en="Place your <em>order</em>" data-fr="Passez votre <em>commande</em>" data-darija="ديري <em>الطلبية</em> ديالك">Place your <em>order</em></h2>
       <div class="ornament"><span class="ln"></span><svg><use href="#diamond"/></svg><span class="ln"></span></div>
-      <p class="lede">Fill in your details. We will confirm by WhatsApp within 24 hours.</p>
+      <p class="lede" data-lang data-en="Fill in your details. We will confirm by WhatsApp within 24 hours." data-fr="Renseignez vos coordonnées. Nous vous confirmons par WhatsApp sous 24 heures." data-darija="عمّري المعلومات. غادي نرجعو ليك فالواتساب فـ 24 ساعة.">Fill in your details. We will confirm by WhatsApp within 24 hours.</p>
     </div>
 
     <form class="order-card" id="order-form" novalidate>
       <div class="order-summary">
         <div>
-          <div class="label">Selected pack</div>
+          <div class="label" data-lang data-en="Selected pack" data-fr="Coffret sélectionné" data-darija="الباك اللي اختارتي">Selected pack</div>
           <div class="v" id="sum-pack">2 Jars</div>
         </div>
         <div class="right">
-          <div class="label">Total</div>
+          <div class="label" data-lang data-en="Total" data-fr="Total" data-darija="المجموع">Total</div>
           <div class="v"><span id="sum-price">319</span> MAD</div>
         </div>
       </div>
 
       <div class="field" data-name="name">
-        <label>Full name <span class="req">*</span></label>
+        <label data-lang data-lang-html data-en="Full name <span class=&quot;req&quot;>*</span>" data-fr="Nom complet <span class=&quot;req&quot;>*</span>" data-darija="الاسم الكامل <span class=&quot;req&quot;>*</span>">Full name <span class="req">*</span></label>
         <input type="text" name="name" id="f-name" autocomplete="name" />
-        <div class="err-msg">Please enter your full name.</div>
+        <div class="err-msg" data-lang data-en="Please enter your full name." data-fr="Veuillez saisir votre nom complet." data-darija="عافاك ديري الاسم الكامل ديالك.">Please enter your full name.</div>
       </div>
 
       <div class="order-fields-row">
         <div class="field" data-name="phone">
-          <label>Phone <span class="req">*</span></label>
+          <label data-lang data-lang-html data-en="Phone <span class=&quot;req&quot;>*</span>" data-fr="Téléphone <span class=&quot;req&quot;>*</span>" data-darija="الهاتف <span class=&quot;req&quot;>*</span>">Phone <span class="req">*</span></label>
           <input type="tel" name="phone" id="f-phone" autocomplete="tel" placeholder="06XXXXXXXX" />
-          <div class="err-msg">Please enter a valid phone number.</div>
+          <div class="err-msg" data-lang data-en="Please enter a valid phone number." data-fr="Veuillez saisir un numéro de téléphone valide." data-darija="ديري نمرة هاتف مزيانة.">Please enter a valid phone number.</div>
         </div>
         <div class="field" data-name="city">
-          <label>City <span class="req">*</span></label>
+          <label data-lang data-lang-html data-en="City <span class=&quot;req&quot;>*</span>" data-fr="Ville <span class=&quot;req&quot;>*</span>" data-darija="المدينة <span class=&quot;req&quot;>*</span>">City <span class="req">*</span></label>
           <input type="text" name="city" id="f-city" autocomplete="address-level2" />
-          <div class="err-msg">Please enter your city.</div>
+          <div class="err-msg" data-lang data-en="Please enter your city." data-fr="Veuillez saisir votre ville." data-darija="ديري المدينة ديالك.">Please enter your city.</div>
         </div>
       </div>
 
       <div class="field" data-name="notes">
-        <label>Special requests (optional)</label>
-        <textarea name="notes" id="f-notes" rows="2" placeholder="Preferred delivery time, gift wrapping, anything else..."></textarea>
+        <label data-lang data-en="Special requests (optional)" data-fr="Demandes particulières (facultatif)" data-darija="ملاحظات (اختياري)">Special requests (optional)</label>
+        <textarea name="notes" id="f-notes" rows="2" data-placeholder-en="Preferred delivery time, gift wrapping, anything else..." data-placeholder-fr="Créneau de livraison, emballage cadeau, autre précision…" data-placeholder-darija="وقت التوصيل اللي يعجبك، هدية، شي حاجة أخرى..."></textarea>
       </div>
 
       <input type="hidden" id="f-bundle" name="bundle" value="2 Jars" />
       <input type="hidden" id="f-price" name="price" value="319" />
 
-      <button type="submit" class="submit-btn">
+      <button type="submit" class="submit-btn" data-lang data-en="Confirm order — Pay on delivery" data-fr="Confirmer la commande — paiement à la livraison" data-darija="أكّدي الطلبية — تخلصي عند الاستلام">
         Confirm order — Pay on delivery
       </button>
 
-      <div class="form-note">
+      <div class="form-note" data-lang data-lang-html data-en="<span class=&quot;check&quot;>✓</span> Your details are private. No online payment required." data-fr="<span class=&quot;check&quot;>✓</span> Vos informations restent confidentielles. Aucun paiement en ligne." data-darija="<span class=&quot;check&quot;>✓</span> المعلومات ديالك محفوظة. مافيش دفع أونلاين.">
         <span class="check">✓</span> Your details are private. No online payment required.
       </div>
 
-      <div class="success-msg" id="success-msg" role="status">
+      <div class="success-msg" id="success-msg" role="status" data-lang data-lang-html data-en="<strong>✓ Redirecting to WhatsApp…</strong><br>Your order will be confirmed within 24 hours." data-fr="<strong>✓ Redirection vers WhatsApp…</strong><br>Votre commande sera confirmée sous 24 heures." data-darija="<strong>✓ كنوجّهوك للواتساب…</strong><br>غادي نأكدو الطلبية فـ 24 ساعة.">
         <strong>✓ Redirecting to WhatsApp…</strong><br>
         Your order will be confirmed within 24 hours.
       </div>
@@ -1126,18 +1162,18 @@
     <div class="trust-grid">
       <div class="trust-item">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7"/></svg>
-        <div class="lab">Delivery across Morocco</div>
-        <div class="sub">Free · 24–72h max</div>
+        <div class="lab" data-lang data-en="Delivery across Morocco" data-fr="Livraison partout au Maroc" data-darija="توصيل لجميع البلاد">Delivery across Morocco</div>
+        <div class="sub" data-lang data-en="Free · 24–72h max" data-fr="Gratuit · 24–72 h max" data-darija="مجاني · 24–72 ساعة">Free · 24–72h max</div>
       </div>
       <div class="trust-item">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="7" width="18" height="12"/><circle cx="12" cy="13" r="2.5"/><path d="M6 7V5h12v2"/></svg>
-        <div class="lab">Pay on delivery</div>
-        <div class="sub">No card required</div>
+        <div class="lab" data-lang data-en="Pay on delivery" data-fr="Paiement à la livraison" data-darija="تخلصي عند الاستلام">Pay on delivery</div>
+        <div class="sub" data-lang data-en="No card required" data-fr="Sans carte bancaire" data-darija="ما محتاجاش للكارطة">No card required</div>
       </div>
       <div class="trust-item">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 21c0-7 4-12 9-13-1 8-5 13-9 13zM12 21c0-7-4-12-9-13 1 8 5 13 9 13z"/></svg>
-        <div class="lab">100% natural</div>
-        <div class="sub">Single ingredient · Dakhla</div>
+        <div class="lab" data-lang data-en="100% natural" data-fr="100 % naturel" data-darija="100% طبيعي">100% natural</div>
+        <div class="sub" data-lang data-en="Single ingredient · Dakhla" data-fr="Un seul ingrédient · Dakhla" data-darija="مكوّن وحيد · Dakhla">Single ingredient · Dakhla</div>
       </div>
     </div>
   </div>
@@ -1162,19 +1198,105 @@
       <div class="rule"></div>
       <div class="sub">Beauty</div>
     </div>
-    <div class="tag">Sourced in Dakhla, Morocco — From the Sahara, for your skin.</div>
+    <div class="tag" data-lang data-en="Sourced in Dakhla, Morocco — From the Sahara, for your skin." data-fr="Sourcée à Dakhla, Maroc — du Sahara, pour votre peau." data-darija="من دخلة، المغرب — من الصحرا، لجلد ديالك.">Sourced in Dakhla, Morocco — From the Sahara, for your skin.</div>
     <div class="socials">
-      <a href="#" aria-label="Instagram">
+      <a href="#" data-aria-en="Instagram" data-aria-fr="Instagram" data-aria-darija="إنستغرام" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
         @sahribeauty
       </a>
-      <a href="#" aria-label="TikTok">
+      <a href="#" data-aria-en="TikTok" data-aria-fr="TikTok" data-aria-darija="تيك توك" aria-label="TikTok">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 4v10a4 4 0 1 1-4-4"/><path d="M14 4c0 3 2 5 5 5"/></svg>
         @sahribeauty
       </a>
     </div>
-    <div class="copyright">© 2026 Sahri Beauty. All rights reserved.</div>
+    <div class="copyright" data-lang data-en="© 2026 SAHRI BEAUTY. All rights reserved." data-fr="© 2026 SAHRI BEAUTY. Tous droits réservés." data-darija="© 2026 SAHRI BEAUTY. جميع الحقوق محفوظة.">© 2026 SAHRI BEAUTY. All rights reserved.</div>
   </footer>
+
+<script>
+(function(){
+  var STORAGE_KEY = 'sahri-lang';
+  var TITLES = {
+    en: 'SAHRI BEAUTY — Nila Brightening Powder, Dakhla',
+    fr: 'SAHRI BEAUTY — Poudre éclaircissante Nila, Dakhla',
+    darija: 'SAHRI BEAUTY — مسحوق Nila للتفتيح، Dakhla'
+  };
+  function normalizeLang(v){
+    if (v === 'fr' || v === 'darija') return v;
+    return 'en';
+  }
+  function readStoredLang(){
+    try { return normalizeLang(localStorage.getItem(STORAGE_KEY)); } catch (e) { return 'en'; }
+  }
+  function packOrderName(el){
+    var lang = window.__sahriLang || 'en';
+    var k = lang === 'darija' ? 'darija' : lang;
+    return el.getAttribute('data-name-' + k) || el.getAttribute('data-name-en') || '';
+  }
+  window.__sahriLang = 'en';
+  window.packOrderName = packOrderName;
+
+  function applyLang(lang){
+    lang = normalizeLang(lang);
+    window.__sahriLang = lang;
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+
+    var html = document.documentElement;
+    html.setAttribute('data-ui-lang', lang);
+    html.setAttribute('lang', lang === 'darija' ? 'ar' : (lang === 'fr' ? 'fr' : 'en'));
+    html.setAttribute('dir', lang === 'darija' ? 'rtl' : 'ltr');
+
+    document.title = TITLES[lang] || TITLES.en;
+
+    document.querySelectorAll('[data-lang]').forEach(function(el){
+      var raw = el.getAttribute('data-' + lang) || el.getAttribute('data-en');
+      if (raw === null) return;
+      if (el.tagName === 'IMG') {
+        el.setAttribute('alt', raw);
+        return;
+      }
+      if (el.hasAttribute('data-lang-html')) {
+        el.innerHTML = raw;
+        return;
+      }
+      el.textContent = raw;
+    });
+
+    document.querySelectorAll('[data-placeholder-en]').forEach(function(el){
+      var ph = el.getAttribute('data-placeholder-' + lang) || el.getAttribute('data-placeholder-en');
+      if (ph !== null) el.setAttribute('placeholder', ph);
+    });
+
+    document.querySelectorAll('[data-aria-en]').forEach(function(el){
+      var a = el.getAttribute('data-aria-' + lang) || el.getAttribute('data-aria-en');
+      if (a !== null) el.setAttribute('aria-label', a);
+    });
+
+    var sel = document.querySelector('.bundle.selected');
+    var sumPack = document.getElementById('sum-pack');
+    var fBundle = document.getElementById('f-bundle');
+    if (sel && sumPack && fBundle) {
+      var pn = packOrderName(sel);
+      sumPack.textContent = pn;
+      fBundle.value = pn;
+    }
+
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn){
+      var on = btn.getAttribute('data-lang-btn') === lang;
+      btn.classList.toggle('active', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+  window.applySahriLang = applyLang;
+
+  applyLang(readStoredLang());
+
+  document.querySelectorAll('[data-lang-btn]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      applyLang(btn.getAttribute('data-lang-btn'));
+    });
+  });
+})();
+</script>
 
 <script>
 (function(){
@@ -1210,8 +1332,8 @@
     el.setAttribute('aria-checked','true');
     summaryPrice.textContent = el.dataset.price;
     sumPrice.textContent = el.dataset.price;
-    sumPack.textContent = el.dataset.name;
-    fBundle.value = el.dataset.name;
+    sumPack.textContent = window.packOrderName(el);
+    fBundle.value = window.packOrderName(el);
     fPrice.value = el.dataset.price;
 
     const img = document.getElementById('bundle-visual-img');
@@ -1264,7 +1386,39 @@
     }
     const bundleName = fBundle.value;
     const totalPrice = fPrice.value;
-    const message =
+    const lang = window.__sahriLang || 'en';
+    const notesLine = notes || '—';
+    var message;
+    if (lang === 'fr') {
+      message =
+`🛍️ Nouvelle commande — SAHRI BEAUTY
+
+Produit : poudre éclaircissante Nila — Dakhla
+Coffret : ${bundleName}
+Total : ${totalPrice} MAD
+
+👤 Nom : ${name}
+📞 Téléphone : ${phone}
+🏙️ Ville : ${city}
+📝 Demandes : ${notesLine}
+
+✅ Commande confirmée — paiement à la livraison`;
+    } else if (lang === 'darija') {
+      message =
+`🛍️ طلبية جديدة — SAHRI BEAUTY
+
+المنتج: مسحوق Nila للتفتيح — Dakhla
+الباك: ${bundleName}
+المجموع: ${totalPrice} درهم
+
+👤 السمية: ${name}
+📞 النمرة: ${phone}
+🏙️ المدينة: ${city}
+📝 ملاحظات: ${notesLine}
+
+✅ الطلبية تأكدات — الدفع عند الاستلام`;
+    } else {
+      message =
 `🛍️ New order - SAHRI BEAUTY
 
 Product: Nila Brightening Powder — Dakhla
@@ -1274,9 +1428,10 @@ Total: ${totalPrice} MAD
 👤 Name: ${name}
 📞 Phone: ${phone}
 🏙️ City: ${city}
-📝 Special requests: ${notes || '—'}
+📝 Special requests: ${notesLine}
 
 ✅ Order confirmed — Cash on delivery`;
+    }
 
     const orderData = { bundle: bundleName, price: totalPrice, name, phone, city, notes };
 
@@ -1285,7 +1440,35 @@ Total: ${totalPrice} MAD
       .catch(() => {});
 
     // 2. Telegram notification (fire and forget)
-    const tgText =
+    var tgText;
+    if (lang === 'fr') {
+      tgText =
+`🛍️ *NOUVELLE COMMANDE — SAHRI BEAUTY*
+
+📦 Coffret : ${bundleName}
+💰 Total : ${totalPrice} MAD
+
+👤 Nom : ${name}
+📞 Téléphone : ${phone}
+🏙️ Ville : ${city}
+📝 Notes : ${notesLine}
+
+⏰ ${new Date().toLocaleString('fr-MA')}`;
+    } else if (lang === 'darija') {
+      tgText =
+`🛍️ *طلبية جديدة — SAHRI BEAUTY*
+
+📦 الباك: ${bundleName}
+💰 المجموع: ${totalPrice} درهم
+
+👤 السمية: ${name}
+📞 النمرة: ${phone}
+🏙️ المدينة: ${city}
+📝 ملاحظات: ${notesLine}
+
+⏰ ${new Date().toLocaleString('fr-MA')}`;
+    } else {
+      tgText =
 `🛍️ *NEW ORDER — SAHRI BEAUTY*
 
 📦 Pack: ${bundleName}
@@ -1294,9 +1477,10 @@ Total: ${totalPrice} MAD
 👤 Name: ${name}
 📞 Phone: ${phone}
 🏙️ City: ${city}
-📝 Notes: ${notes || '—'}
+📝 Notes: ${notesLine}
 
 ⏰ ${new Date().toLocaleString('fr-MA')}`;
+    }
     fetch('https://api.telegram.org/bot' + TELEGRAM_TOKEN + '/sendMessage', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
