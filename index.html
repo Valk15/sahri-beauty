@@ -1,1526 +1,297 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>SAHRI BEAUTY — Nila Brightening Powder, Dakhla</title>
-<link rel="icon" type="image/webp" href="uploads/Favicon Sahri.webp" />
-<link rel="shortcut icon" type="image/webp" href="uploads/Favicon Sahri.webp" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy:#1C2855;
-    --navy-deep:#101a3d;
-    --navy-ink:#0e1530;
-    --gold:#C4932A;
-    --gold-soft:#D9B057;
-    --gold-pale:#E8CE89;
-    --cream:#F5EDD6;
-    --cream-light:#FBF6E6;
-    --offwhite:#FAF7F2;
-    --ink:#2A2A2A;
-    --muted:#8A8576;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0;background:var(--cream);color:var(--ink);
-    font-family:'Jost',system-ui,sans-serif;font-weight:400;font-size:16px;line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,h4{font-family:'Cormorant Garamond','Times New Roman',serif;color:var(--navy);font-weight:500;letter-spacing:.005em;margin:0}
-  p{margin:0}
-  img{display:block;max-width:100%}
-  a{color:inherit;text-decoration:none}
-  button{font-family:inherit;cursor:pointer}
-
-  /* ============ Reusable artistic frame ============ */
-  .frame{
-    position:relative;
-    padding:14px;
-    background:
-      linear-gradient(135deg, rgba(196,147,42,.18), rgba(196,147,42,0) 35%, rgba(196,147,42,0) 65%, rgba(196,147,42,.18)),
-      var(--offwhite);
-  }
-  .frame::before, .frame::after{
-    content:"";position:absolute;pointer-events:none;
-  }
-  /* outer thin gold line */
-  .frame::before{inset:6px;border:1px solid rgba(196,147,42,.55)}
-  /* inner gold line */
-  .frame::after{inset:14px;border:1px solid rgba(196,147,42,.9)}
-  .frame > .ph,
-  .frame > img{
-    position:relative;
-    z-index:1;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-  }
-  .frame .corner{
-    position:absolute;
-    width:30px;height:30px;
-    z-index:2;
-    pointer-events:none;
-    color:var(--gold);
-  }
-  .frame .corner svg{width:100%;height:100%;display:block}
-  .frame .corner.tl{top:0;left:0}
-  .frame .corner.tr{top:0;right:0;transform:scaleX(-1)}
-  .frame .corner.bl{bottom:0;left:0;transform:scaleY(-1)}
-  .frame .corner.br{bottom:0;right:0;transform:scale(-1,-1)}
-  .frame .ornament-strip{
-    position:absolute;left:50%;transform:translateX(-50%);
-    color:var(--gold);
-    display:flex;align-items:center;gap:8px;
-    background:var(--offwhite);
-    padding:0 14px;
-    z-index:3;
-  }
-  .frame .ornament-strip svg{width:18px;height:18px;display:block}
-  .frame .ornament-strip.top{top:6px}
-  .frame .ornament-strip.bot{bottom:6px}
-
-  /* Square aspect for placeholder content */
-  .frame-sq{aspect-ratio:1/1}
-  .frame-portrait{aspect-ratio:4/5}
-  .frame-wide{aspect-ratio:3/2}
-  .frame-tall{aspect-ratio:3/4}
-
-  /* ============ HEADER STRIP ============ */
-  .announce{
-    background:var(--navy);color:var(--gold-pale);
-    text-align:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-    padding:9px 14px;font-weight:500;
-    border-bottom:1px solid var(--gold);
-  }
-  .announce .dot{margin:0 10px;opacity:.55}
-  header.brand{
-    background:var(--cream);text-align:center;padding:24px 16px 20px;
-    border-bottom:1px solid rgba(196,147,42,.4);
-    position:relative;
-  }
-  header.brand::before,
-  header.brand::after{
-    content:"";position:absolute;top:50%;width:60px;height:1px;background:var(--gold);opacity:.5;
-  }
-  header.brand::before{left:18px}
-  header.brand::after{right:18px}
-  .logo{display:inline-flex;flex-direction:column;align-items:center;gap:2px}
-  .logo .mark{
-    font-family:'Cormorant Garamond',serif;font-size:36px;line-height:1;color:var(--navy);
-    letter-spacing:.24em;font-weight:500;padding-left:.24em;
-  }
-  .logo .sub{
-    font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.55em;color:var(--gold);
-    text-transform:uppercase;padding-left:.55em;
-  }
-  .logo .rule{width:46px;height:1px;background:var(--gold);margin:7px auto 5px}
-
-  /* Common ornament glyph (used inline) */
-  .glyph-svg{width:18px;height:18px;color:var(--gold);display:inline-block;vertical-align:middle}
-
-  /* ============ Section title common ============ */
-  section{padding:72px 22px;position:relative}
-  .section-title{text-align:center;margin-bottom:48px;max-width:680px;margin-left:auto;margin-right:auto}
-  .section-title .kicker{color:var(--gold);font-size:10px;letter-spacing:.4em;text-transform:uppercase;margin-bottom:14px;font-weight:500}
-  .section-title h2{font-size:42px;line-height:1.08}
-  .section-title h2 em{color:var(--gold);font-style:italic;font-weight:400}
-  .section-title .lede{margin-top:14px;color:#3a3a3a;font-size:15.5px;max-width:520px;margin-left:auto;margin-right:auto}
-  .ornament{display:flex;align-items:center;justify-content:center;gap:10px;margin:16px auto 0;color:var(--gold)}
-  .ornament .ln{width:40px;height:1px;background:var(--gold)}
-  .ornament .dia{width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
-  .ornament svg{width:14px;height:14px}
-  .gold-divider{height:1px;background:var(--gold);opacity:.5;border:0;margin:0}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAHRI SKIN — Ton corps. Ton parfum.</title>
+  <meta name="description" content="Pack rituel corps et cheveux personnalisé — Huile d'Amande Parfumée, Beurre Corporel 100g, diffuseur offert. Livraison COD au Maroc." />
+  <link rel="icon" type="image/png" href="assets/favicon-sahri-skin.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ============ 1. HEADER ============ -->
-  <style>
-    .announce{
-      background:var(--navy);color:var(--gold-pale);
-      text-align:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-      padding:9px 14px;font-weight:500;
-      border-bottom:1px solid var(--gold);
-      position:relative;z-index:1001;
-    }
-    .announce .dot{margin:0 10px;opacity:.55}
+  <div class="announce">Édition de lancement — quantités limitées · Livraison COD partout au Maroc</div>
 
-    /* ---- NAVBAR ---- */
-    .navbar{
-      position:sticky;top:0;z-index:1000;
-      background:rgba(245,237,214,.97);
-      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(196,147,42,.4);
-      transition:box-shadow .25s ease;
-    }
-    .navbar.scrolled{
-      box-shadow:0 4px 28px -8px rgba(28,40,85,.18);
-    }
-    .navbar-inner{
-      max-width:1200px;margin:0 auto;
-      display:flex;align-items:center;justify-content:space-between;
-      padding:0 24px;height:70px;
-      gap:16px;
-    }
-
-    /* Logo */
-    .nav-logo{
-      flex:0 0 auto;display:flex;align-items:center;
-    }
-    .nav-logo img{
-      height:48px;width:auto;display:block;object-fit:contain;
-    }
-
-    /* Nav links */
-    .nav-links{
-      display:flex;align-items:center;gap:32px;
-      list-style:none;margin:0;padding:0;
-    }
-    .nav-links a{
-      font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.3em;
-      text-transform:uppercase;color:var(--navy);font-weight:500;
-      position:relative;padding-bottom:3px;
-      transition:color .18s ease;
-    }
-    .nav-links a::after{
-      content:"";position:absolute;bottom:0;left:0;width:0;height:1px;
-      background:var(--gold);transition:width .22s ease;
-    }
-    .nav-links a:hover{color:var(--gold)}
-    .nav-links a:hover::after{width:100%}
-
-    /* Order CTA in nav */
-    .nav-cta{
-      background:var(--navy);color:var(--gold) !important;
-      padding:10px 22px !important;letter-spacing:.26em !important;
-      border:1px solid var(--navy);
-      transition:background .18s ease, color .18s ease !important;
-    }
-    .nav-cta::after{display:none !important}
-    .nav-cta:hover{background:transparent !important;color:var(--navy) !important;border-color:var(--navy)}
-
-    /* Hamburger */
-    .nav-burger{
-      display:none;flex-direction:column;gap:5px;
-      background:none;border:none;padding:6px;cursor:pointer;
-      flex:0 0 auto;
-    }
-    .nav-burger span{
-      display:block;width:24px;height:1.5px;background:var(--navy);
-      transition:transform .25s ease, opacity .25s ease;
-    }
-    .nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-    .nav-burger.open span:nth-child(2){opacity:0}
-    .nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-
-    /* Mobile drawer */
-    @media (max-width:820px){
-      .nav-links{
-        position:fixed;top:0;right:-100%;width:72vw;max-width:300px;
-        height:100vh;background:var(--cream);
-        flex-direction:column;align-items:flex-start;gap:0;
-        padding:90px 32px 40px;
-        box-shadow:-8px 0 40px rgba(28,40,85,.15);
-        transition:right .3s ease;z-index:999;
-      }
-      .nav-links.open{right:0}
-      .nav-links li{width:100%;border-bottom:1px solid rgba(196,147,42,.25)}
-      .nav-links a{
-        display:block;padding:16px 0;font-size:13px;letter-spacing:.26em;
-      }
-      .nav-links .nav-cta{
-        margin-top:18px;text-align:center;
-        border:1px solid var(--navy);padding:14px 22px !important;
-      }
-      .nav-burger{display:flex}
-      /* Overlay */
-      .nav-overlay{
-        display:none;position:fixed;inset:0;background:rgba(14,21,48,.35);
-        z-index:998;
-      }
-      .nav-overlay.open{display:block}
-    }
-    /* ---- LANG SWITCHER ---- */
-    .lang-switcher{
-      display:flex;align-items:center;gap:4px;flex:0 0 auto;margin-left:8px;
-    }
-    .lang-sep{color:rgba(196,147,42,.5);font-size:11px;line-height:1}
-    .lang-btn{
-      background:none;border:none;padding:4px 6px;
-      font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
-      color:var(--navy);cursor:pointer;position:relative;padding-bottom:5px;
-      transition:color .15s ease;
-    }
-    .lang-btn[data-lang-btn="darija"]{
-      font-family:system-ui,sans-serif;letter-spacing:0;font-size:12px;text-transform:none;
-    }
-    html[data-ui-lang="darija"] [data-lang]{
-      font-family:system-ui,"Segoe UI",Tahoma,Arial,sans-serif;
-    }
-    .lang-btn.active{color:var(--gold)}
-    .lang-btn.active::after{
-      content:"";position:absolute;bottom:0;left:6px;right:6px;height:1px;background:var(--gold);
-    }
-    .lang-btn:hover{color:var(--gold)}
-    @media (max-width:820px){
-      .lang-switcher{margin-left:0;margin-right:8px}
-    }
-  </style>
-
-  <div class="announce" role="banner" data-lang data-lang-html
-    data-en="Delivery in 24–72h across Morocco <span class=&quot;dot&quot;>✦</span> Cash on delivery"
-    data-fr="Livraison sous 24 à 72 h partout au Maroc <span class=&quot;dot&quot;>✦</span> Paiement à la livraison"
-    data-darija="التوصيل فـ 24 حتال 72 ساعة فجميع البلاد <span class=&quot;dot&quot;>✦</span> الدفع عند الاستلام">
-    Delivery in 24–72h across Morocco <span class="dot">✦</span> Cash on delivery
-  </div>
-
-  <header class="navbar" id="navbar">
-    <nav class="navbar-inner" data-aria-en="Main navigation" data-aria-fr="Navigation principale" data-aria-darija="القائمة الرئيسية" aria-label="Main navigation">
-
-      <a class="nav-logo" href="#" data-aria-en="SAHRI BEAUTY — Home" data-aria-fr="SAHRI BEAUTY — Accueil" data-aria-darija="SAHRI BEAUTY — الرئيسية" aria-label="SAHRI BEAUTY — Home">
-        <img src="uploads/logo SAHri.webp" alt="SAHRI BEAUTY" />
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo" aria-label="SAHRI SKIN accueil">
+        <img src="assets/favicon-sahri-skin.png" alt="" width="52" height="52" />
+        <span class="logo-text">
+          <span class="logo-sahri">SAHRI</span>
+          <span class="logo-skin">SKIN</span>
+        </span>
       </a>
-
-      <ul class="nav-links" id="nav-links" role="list">
-        <li><a href="#bundles-section" data-lang data-en="Shop" data-fr="Boutique" data-darija="تسوّق">Shop</a></li>
-        <li><a href="#how" data-lang data-en="How to Use" data-fr="Mode d’emploi" data-darija="كيفاش تستعملوها">How to Use</a></li>
-        <li><a href="#story" data-lang data-en="Our Story" data-fr="Notre histoire" data-darija="حكايتنا">Our Story</a></li>
-        <li><a href="#order" class="nav-cta" data-lang data-en="DM us to order" data-fr="Écrivez-nous pour commander" data-darija="راسلونا باش تطلبو">DM us to order</a></li>
+      <button class="nav-toggle" type="button" aria-label="Menu" id="navToggle">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#produits">Le pack</a></li>
+        <li><a href="#parfums">Parfums</a></li>
+        <li><a href="#resultats">Résultats</a></li>
+        <li><a href="#commander">Commander</a></li>
+        <li><a href="#commander" class="btn btn-primary" style="padding:10px 20px">Commander</a></li>
       </ul>
-
-      <div class="lang-switcher" role="group" data-aria-en="Language selector" data-aria-fr="Sélecteur de langue" data-aria-darija="اختيار اللغة" aria-label="Language selector">
-        <button class="lang-btn active" data-lang-btn="en" aria-pressed="true">EN</button>
-        <span class="lang-sep" aria-hidden="true">|</span>
-        <button class="lang-btn" data-lang-btn="fr" aria-pressed="false">FR</button>
-        <span class="lang-sep" aria-hidden="true">|</span>
-        <button class="lang-btn" data-lang-btn="darija" aria-pressed="false">الدارجة</button>
-      </div>
-
-      <div class="nav-overlay" id="nav-overlay"></div>
-      <button class="nav-burger" id="nav-burger" data-aria-en="Open menu" data-aria-fr="Ouvrir le menu" data-aria-darija="فتح القائمة" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-    </nav>
+    </div>
   </header>
 
-  <script>
-  (function(){
-    const burger = document.getElementById('nav-burger');
-    const links  = document.getElementById('nav-links');
-    const overlay= document.getElementById('nav-overlay');
-    const navbar = document.getElementById('navbar');
-    function toggleMenu(open){
-      burger.classList.toggle('open', open);
-      links.classList.toggle('open', open);
-      overlay.classList.toggle('open', open);
-      burger.setAttribute('aria-expanded', open);
-      document.body.style.overflow = open ? 'hidden' : '';
-    }
-    burger.addEventListener('click', () => toggleMenu(!links.classList.contains('open')));
-    overlay.addEventListener('click', () => toggleMenu(false));
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
-    }, {passive:true});
-  })();
-  </script>
-
-  <!-- ============ 2. HERO ============ -->
-  <style>
-    .hero{
-      position:relative;
-      padding:46px 22px 64px;
-      background:
-        radial-gradient(1100px 600px at 50% -100px, rgba(196,147,42,.18), transparent 60%),
-        var(--cream);
-      overflow:hidden;
-    }
-    .hero::before, .hero::after{
-      content:"";position:absolute;left:50%;transform:translateX(-50%);height:1px;background:var(--gold);opacity:.4;
-    }
-    .hero::before{top:0;width:80%}
-    .hero::after{bottom:0;width:80%}
-    .hero-grid{
-      max-width:1180px;margin:0 auto;
-      display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center;
-    }
-    .hero-media{position:relative}
-    .hero-frame{width:100%;aspect-ratio:5/6;}
-    .hero-badge{
-      position:absolute;top:18px;left:18px;z-index:5;
-      background:var(--navy);color:var(--gold);
-      width:96px;height:96px;border-radius:50%;
-      display:flex;flex-direction:column;align-items:center;justify-content:center;
-      font-family:'Cormorant Garamond',serif;text-align:center;line-height:1;
-      box-shadow:0 0 0 1px var(--gold), 0 0 0 6px var(--cream), 0 10px 30px rgba(28,40,85,.25);
-    }
-    .hero-badge .num{font-size:26px;font-style:italic}
-    .hero-badge .tag{font-family:'Jost',sans-serif;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-pale);margin-top:4px;padding:0 8px}
-    .hero-badge .arc{
-      position:absolute;inset:6px;border:1px dashed rgba(217,176,87,.5);border-radius:50%;
-    }
-    .hero-sidekick{
-      position:absolute;right:-18px;bottom:-22px;
-      width:38%;aspect-ratio:1/1;z-index:4;
-      box-shadow:0 18px 40px -18px rgba(28,40,85,.45);
-    }
-    .hero-copy .eyebrow{
-      color:var(--gold);font-size:10px;letter-spacing:.4em;text-transform:uppercase;
-      display:flex;align-items:center;gap:12px;margin-bottom:18px;
-    }
-    .hero-copy .eyebrow::before, .hero-copy .eyebrow::after{
-      content:"";height:1px;flex:0 0 28px;background:var(--gold);
-    }
-    .hero-copy h1{
-      font-size:60px;line-height:1;letter-spacing:-.005em;font-weight:500;
-    }
-    .hero-copy h1 em{font-style:italic;color:var(--gold);font-weight:400}
-    .hero-meta{
-      margin-top:18px;
-      display:flex;align-items:center;gap:14px;flex-wrap:wrap;
-      color:var(--navy);font-size:10px;letter-spacing:.32em;text-transform:uppercase;
-    }
-    .hero-meta .sep{width:4px;height:4px;background:var(--gold);transform:rotate(45deg)}
-    .hero-stars{
-      margin:22px 0 6px;display:flex;align-items:center;gap:12px;
-      color:var(--gold);letter-spacing:.18em;font-size:15px;
-    }
-    .hero-stars small{color:var(--muted);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-    .hero-copy .pitch{
-      margin-top:18px;font-size:17px;line-height:1.7;color:#3a3a3a;max-width:520px;
-      font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
-    }
-    .hero-copy .pitch::before{
-      content:"“";font-size:48px;color:var(--gold);line-height:0;margin-right:6px;vertical-align:-18px;
-    }
-    .hero-price{
-      margin-top:28px;display:flex;align-items:baseline;gap:14px;
-    }
-    .hero-price .from{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted)}
-    .hero-price .v{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--navy)}
-    .hero-price .v .unit{font-size:14px;color:var(--gold);letter-spacing:.18em;margin-left:6px}
-    .hero-price .strike{font-size:14px;color:var(--muted);text-decoration:line-through}
-    .hero-actions{
-      margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;
-    }
-    .btn-primary{
-      background:var(--navy);color:var(--gold);border:none;border-radius:0;
-      height:60px;padding:0 32px;
-      font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;
-      transition:background .2s ease, letter-spacing .2s ease;
-      display:inline-flex;align-items:center;gap:10px;
-      min-width:240px;justify-content:center;
-    }
-    .btn-primary:hover{background:var(--navy-deep);letter-spacing:.36em}
-    .btn-primary .arrow{transition:transform .2s ease}
-    .btn-primary:hover .arrow{transform:translateX(4px)}
-    .btn-ghost{
-      background:transparent;color:var(--navy);
-      border:1px solid var(--navy);border-radius:0;height:60px;padding:0 24px;
-      font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;
-      display:inline-flex;align-items:center;gap:8px;
-      transition:background .2s ease, color .2s ease;
-    }
-    .btn-ghost:hover{background:var(--navy);color:var(--gold)}
-    .hero-trust{
-      margin-top:22px;display:flex;align-items:center;gap:18px;color:var(--muted);
-      font-size:11px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap;
-    }
-    .hero-trust span{display:inline-flex;align-items:center;gap:6px}
-    .hero-trust .ic{color:var(--gold)}
-    @media (max-width:880px){
-      .hero{padding:30px 18px 56px}
-      .hero-grid{grid-template-columns:1fr;gap:36px}
-      .hero-copy h1{font-size:46px}
-      .hero-sidekick{width:42%;right:-8px;bottom:-12px}
-    }
-    @media (max-width:480px){
-      .hero-copy h1{font-size:38px}
-      .btn-primary,.btn-ghost{width:100%}
-      .hero-actions{flex-direction:column}
-      .hero-badge{width:82px;height:82px;top:14px;left:14px}
-      .hero-badge .num{font-size:22px}
-    }
-  </style>
   <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-media">
-        <div class="hero-badge" data-aria-en="New 2026 batch" data-aria-fr="Nouveau lot 2026" data-aria-darija="دفعة جديدة 2026" aria-label="New 2026 batch">
-          <div class="arc"></div>
-          <div class="num">N°1</div>
-          <div class="tag" data-lang data-lang-html data-en="Dakhla<br>Origin" data-fr="Dakhla<br>Provenance" data-darija="Dakhla<br>من الدار">Dakhla<br>Origin</div>
-        </div>
-        <div class="frame hero-frame">
-          <span class="corner tl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner tr"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner bl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="ornament-strip top"><svg><use href="#diamond"/></svg></span>
-          <span class="ornament-strip bot"><svg><use href="#diamond"/></svg></span>
-          <img id="product-img" src="sahri porduct design.png" alt="SAHRI BEAUTY Nila Powder — Moroccan hammam setting" fetchpriority="high" decoding="async" data-lang data-en="SAHRI BEAUTY Nila Powder — Moroccan hammam setting" data-fr="SAHRI BEAUTY — Poudre Nila, ambiance hammam marocaine" data-darija="SAHRI BEAUTY — مسحوق Nila فالحمام المغربي" />
-        </div>
-        <div class="frame hero-sidekick">
-          <span class="corner tl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner tr"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner bl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <img src="Shri product.png" alt="SAHRI BEAUTY Nila jar — studio shot" loading="lazy" decoding="async" data-lang data-en="SAHRI BEAUTY Nila jar — studio shot" data-fr="SAHRI BEAUTY — pot Nila, photo studio" data-darija="SAHRI BEAUTY — مرطبان Nila فالستوديو" />
-        </div>
-      </div>
-
-      <div class="hero-copy">
-        <div class="eyebrow" data-lang data-en="From the Sahara, for your skin" data-fr="Du Sahara, pour votre peau" data-darija="من الصحرا، لجلد ديالك">From the Sahara, for your skin</div>
-        <h1 data-lang data-lang-html data-en="Nila Brightening<br><em>Powder</em>" data-fr="Nila Brightening<br><em>Poudre éclaircissante</em>" data-darija="Nila Brightening<br><em>مسحوق يبيّض وزين</em>">Nila Brightening<br><em>Powder</em></h1>
-
-        <div class="hero-meta">
-          <span data-lang data-en="Dakhla · Morocco" data-fr="Dakhla · Maroc" data-darija="Dakhla · المغرب">Dakhla · Morocco</span><span class="sep"></span>
-          <span data-lang data-en="100g" data-fr="100 g" data-darija="100 غ">100g</span><span class="sep"></span>
-          <span data-lang data-en="Pure Indigo" data-fr="Indigo pur" data-darija="Nila نقية بالطبيعي">Pure Indigo</span>
-        </div>
-
-        <div class="hero-stars" data-aria-en="Rated 5 out of 5" data-aria-fr="Noté 5 sur 5" data-aria-darija="تقييم 5 من 5" aria-label="Rated 5 out of 5">
-          <span aria-hidden="true">★ ★ ★ ★ ★</span>
-          <small data-lang data-en="Rated 5/5 by our customers" data-fr="Noté 5/5 par nos clientes" data-darija="تقييم 5/5 من طرف الزبناء">Rated 5/5 by our customers</small>
-        </div>
-
-        <p class="pitch" data-lang data-en="The Nila Sahrawi women have used for centuries — exactly as it comes from the source. No additives. No intermediaries." data-fr="La Nila que les femmes sahraouies utilisent depuis des siècles, telle qu’elle sort de la source. Sans additifs. Sans intermédiaires." data-darija="Nila اللي كيديرو بيها الصحراويات من قرون، كيفما كاتجي من عند المصدر مباشرة. مافيهاش زوائد، مافيش وسيط بيناتكم وبينها.">
-          The Nila Sahrawi women have used for centuries — exactly as it comes from the source.
-          No additives. No intermediaries.
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-badge">Nouveau · Maroc</span>
+        <h1>Ton corps.<br /><em>Ton parfum.</em></h1>
+        <p class="hero-lead">
+          Un pack rituel 100&nbsp;% naturel — <strong>Huile d'Amande Parfumée</strong>, beurre corporel et petit diffuseur offert.
+          Tu choisis ton parfum, tout sent pareil : peau, cheveux, moment.
         </p>
-
-        <div class="hero-price">
-          <span class="from" data-lang data-en="From" data-fr="À partir de" data-darija="من">From</span>
-          <span class="v">199<span class="unit">MAD</span></span>
-          <span class="strike" data-lang data-en="398 MAD / 2 jars" data-fr="398 MAD / 2 pots" data-darija="398 درهم / جوج مراتب">398 MAD / 2 jars</span>
+        <p class="hero-price">299 MAD <span>· pack standard · paiement à la livraison</span></p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px">
+          <a href="#commander" class="btn btn-primary">Commander en COD</a>
+          <a href="https://instagram.com/sahriskin" class="btn btn-outline" target="_blank" rel="noopener">@sahriskin</a>
         </div>
-
-        <div class="hero-actions">
-          <button class="btn-primary" type="button" data-cta="bundle" data-lang data-lang-html data-en="DM us to order <span class=&quot;arrow&quot;>→</span>" data-fr="Écrivez-nous pour commander <span class=&quot;arrow&quot;>→</span>" data-darija="راسلونا باش تطلبو <span class=&quot;arrow&quot;>→</span>">
-            DM us to order <span class="arrow">→</span>
-          </button>
-          <a class="btn-ghost" href="#story" data-lang data-en="Our Story" data-fr="Notre histoire" data-darija="حكايتنا">Our Story</a>
-        </div>
-
-        <div class="hero-trust">
-          <span><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7"/></svg> <span data-lang data-en="Delivery in 24–72h" data-fr="Livraison en 24–72 h" data-darija="توصيل فـ 24–72 ساعة">Delivery in 24–72h</span></span>
-          <span><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="7" width="18" height="12"/><circle cx="12" cy="13" r="2.5"/></svg> <span data-lang data-en="Cash on delivery" data-fr="Paiement à la livraison" data-darija="الدفع عند الاستلام">Cash on delivery</span></span>
-          <span><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21c0-7 4-12 9-13-1 8-5 13-9 13zM12 21c0-7-4-12-9-13 1 8 5 13 9 13z"/></svg> <span data-lang data-en="100% natural" data-fr="100 % naturel" data-darija="100% طبيعي">100% natural</span></span>
-        </div>
+      </div>
+      <div>
+        <img class="hero-img" src="assets/img/02-full-pack-100g.png" alt="Pack SAHRI SKIN ouvert avec Huile d'Amande Parfumée, Beurre Corporel et diffuseur" width="600" height="600" loading="eager" />
       </div>
     </div>
   </section>
 
-  <!-- ============ 3. BENEFITS BAR ============ -->
-  <style>
-    .benefits{
-      background:var(--navy);color:var(--cream);
-      padding:38px 14px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;text-align:center;
-      border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);
-      position:relative;
-    }
-    .benefits::before, .benefits::after{
-      content:"";position:absolute;left:50%;transform:translateX(-50%);
-      width:80%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.5;
-    }
-    .benefits::before{top:6px}
-    .benefits::after{bottom:6px}
-    .benefit{
-      display:flex;flex-direction:column;align-items:center;gap:14px;
-      padding:8px 8px;border-right:1px solid rgba(196,147,42,.3);
-    }
-    .benefit:last-child{border-right:0}
-    .benefit .icon{
-      width:54px;height:54px;display:flex;align-items:center;justify-content:center;color:var(--gold);
-      border:1px solid rgba(196,147,42,.5);position:relative;
-    }
-    .benefit .icon::before, .benefit .icon::after{
-      content:"";position:absolute;width:8px;height:8px;border:1px solid var(--gold);
-    }
-    .benefit .icon::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
-    .benefit .icon::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
-    .benefit .icon svg{width:26px;height:26px}
-    .benefit .label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--cream);font-weight:400}
-    .benefit .sub{font-size:10px;color:rgba(245,237,214,.6);letter-spacing:.1em;font-style:italic;font-family:'Cormorant Garamond',serif}
-    @media (max-width:760px){
-      .benefits{grid-template-columns:repeat(2,1fr);gap:0}
-      .benefit{border-right:0;border-bottom:1px solid rgba(196,147,42,.3);padding:18px 8px}
-      .benefit:nth-child(odd){border-right:1px solid rgba(196,147,42,.3)}
-      .benefit:nth-child(3),.benefit:nth-child(4){border-bottom:0}
-    }
-  </style>
-  <div class="benefits" data-aria-en="Benefits" data-aria-fr="Bienfaits" data-aria-darija="الفوائد" aria-label="Benefits">
-    <div class="benefit">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3"/><circle cx="12" cy="12" r="4"/></svg></div>
-      <div class="label" data-lang data-en="Brightening" data-fr="Éclat" data-darija="تفتيح">Brightening</div>
-      <div class="sub" data-lang data-en="Even, luminous skin" data-fr="Peau unifiée et lumineuse" data-darija="جلد موحّد ومزيان يلمع">Even, luminous skin</div>
-    </div>
-    <div class="benefit">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="9" cy="9" r="2"/><circle cx="16" cy="14" r="1.4"/><circle cx="8" cy="16" r="1.2"/><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/></svg></div>
-      <div class="label" data-lang data-en="Dark Spots" data-fr="Taches brunes" data-darija="البقع">Dark Spots</div>
-      <div class="sub" data-lang data-en="Fades hyperpigmentation" data-fr="Atténue l’hyperpigmentation" data-darija="كيهوّن التسبغات على وجهك">Fades hyperpigmentation</div>
-    </div>
-    <div class="benefit">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10z"/></svg></div>
-      <div class="label" data-lang data-en="Soothing" data-fr="Apaisant" data-darija="مهدّي">Soothing</div>
-      <div class="sub" data-lang data-en="Calms inflammation" data-fr="Calme les irritations" data-darija="كيهدّي الاحمرار واللهيبة">Calms inflammation</div>
-    </div>
-    <div class="benefit">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 12c4 0 4-6 9-6s5 6 9 6-4 6-9 6-5-6-9-6z"/><circle cx="12" cy="12" r="2"/></svg></div>
-      <div class="label" data-lang data-en="Exfoliating" data-fr="Exfoliant doux" data-darija="تقشير خفيف">Exfoliating</div>
-      <div class="sub" data-lang data-en="Gentle daily renewal" data-fr="Renouvellement doux du teint" data-darija="كيجدّد الجلد بالراحة">Gentle daily renewal</div>
-    </div>
-  </div>
+  <section id="produits" class="bg-white">
+    <div class="container">
+      <p class="section-kicker">Le pack signature</p>
+      <h2 class="section-title">Trois produits. Un seul parfum. Le tien.</h2>
+      <p style="color:var(--muted);max-width:60ch">Chaque commande est préparée dans la fragrance que tu choisis. L'huile nourrit la peau et les cheveux. Le beurre scelle l'hydratation. Le diffuseur est le petit cadeau offert dans la box.</p>
 
-  <!-- ============ 4. ORIGIN BANNER (full-bleed Dakhla) ============ -->
-  <style>
-    .origin-banner{
-      position:relative;padding:90px 22px;color:var(--cream);text-align:center;
-      background:
-        linear-gradient(180deg, rgba(14,21,48,.65), rgba(14,21,48,.6)),
-        url('assets/dakhla-coast.jpg') center/cover no-repeat;
-      border-bottom:1px solid var(--gold);
-    }
-    .origin-banner::before, .origin-banner::after{
-      content:"";position:absolute;left:50%;transform:translateX(-50%);
-      width:60%;max-width:720px;height:1px;background:var(--gold);opacity:.5;
-    }
-    .origin-banner::before{top:22px}
-    .origin-banner::after{bottom:22px}
-    .origin-banner .kicker{color:var(--gold-pale);font-size:10px;letter-spacing:.4em;text-transform:uppercase;margin-bottom:18px}
-    .origin-banner h2{font-size:54px;line-height:1.05;color:var(--cream)}
-    .origin-banner h2 em{color:var(--gold-pale);font-style:italic;font-weight:400}
-    .origin-banner .coords{
-      margin-top:22px;display:inline-flex;align-items:center;gap:14px;
-      font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-pale);
-    }
-    .origin-banner .coords .ln{width:30px;height:1px;background:var(--gold-pale)}
-    @media (max-width:560px){.origin-banner h2{font-size:38px}}
-  </style>
-  <section class="origin-banner" data-aria-en="Sourced in Dakhla" data-aria-fr="Sourcée à Dakhla" data-aria-darija="من دخلة" aria-label="Sourced in Dakhla">
-    <div class="kicker" data-lang data-en="Sourced at origin" data-fr="À la source" data-darija="من عند المصدر">Sourced at origin</div>
-    <h2 data-lang data-lang-html data-en="From the dunes of <em>Dakhla</em><br>to your dressing table." data-fr="Des dunes de <em>Dakhla</em><br>jusqu’à votre coiffeuse." data-darija="من رمال <em>Dakhla</em><br>حتى لطاولة الزين ديالك.">From the dunes of <em>Dakhla</em><br>to your dressing table.</h2>
-    <div class="coords"><span class="ln"></span> 23.6848° N · 15.9579° W <span class="ln"></span></div>
+      <div class="products-grid">
+        <article class="product-card">
+          <img src="assets/img/huile-damande-parfumee.png" alt="Huile d'Amande Parfumée SAHRI SKIN 60ml couvercle spray or" loading="lazy" />
+          <div class="product-card-body">
+            <p class="size">60ml · spray</p>
+            <h3>Huile d'Amande Parfumée</h3>
+            <p>Huile d'amande marocaine parfumée dans ton aroma. Corps et cheveux — couvercle spray or, style parfum.</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="assets/img/beurre-corporel-100g.png" alt="Beurre Corporel SAHRI SKIN 100g" loading="lazy" />
+          <div class="product-card-body">
+            <p class="size">100g</p>
+            <h3>Beurre Corporel</h3>
+            <p>Beurre riche, même parfum que l'huile. Après la douche, pour fixer la douceur sur la peau.</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="assets/img/diffuseur-rituel.png" alt="Diffuseur Rituel 30ml cadeau dans la box" loading="lazy" />
+          <div class="product-card-body">
+            <p class="size">30ml · cadeau</p>
+            <h3>Diffuseur Rituel</h3>
+            <p>Le petit cadeau offert dans la box — ambiance pendant ton rituel, pas un parfum de maison.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="scarcity-banner">
+        <img src="assets/img/09-scarcite-edition-limitee.png" alt="Édition de lancement SAHRI SKIN quantités limitées" loading="lazy" />
+      </div>
+    </div>
   </section>
 
-  <!-- ============ 5. BUNDLE SELECTOR ============ -->
-  <style>
-    .bundles-section{background:var(--cream);position:relative}
-    .bundles{display:flex;flex-direction:column;gap:14px;max-width:560px;margin:0 auto}
-    .bundle{
-      position:relative;background:var(--offwhite);
-      border:1px solid var(--gold);padding:22px 24px;cursor:pointer;
-      transition:all .18s ease;display:flex;align-items:center;gap:18px;
-    }
-    .bundle:hover{transform:translateY(-1px)}
-    .bundle .radio{
-      width:22px;height:22px;border:1.5px solid var(--gold);border-radius:50%;
-      flex:0 0 22px;position:relative;transition:all .18s ease;
-    }
-    .bundle .radio::after{
-      content:"";position:absolute;inset:4px;border-radius:50%;background:var(--navy);
-      transform:scale(0);transition:transform .18s ease;
-    }
-    .bundle .info{flex:1;display:flex;flex-direction:column;gap:5px;min-width:0}
-    .bundle .name{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--navy);line-height:1}
-    .bundle .meta{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-    .bundle .save{color:var(--gold);font-size:12px;letter-spacing:.08em;font-style:italic;font-family:'Cormorant Garamond',serif}
-    .bundle .price{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--navy);
-      text-align:right;line-height:1;display:flex;flex-direction:column;gap:5px;align-items:flex-end}
-    .bundle .price .strike{font-family:'Jost',sans-serif;font-size:12px;color:var(--muted);text-decoration:line-through;font-weight:400}
-    .bundle .badge{
-      position:absolute;top:-11px;right:20px;background:var(--gold);color:#fff;
-      font-size:9px;letter-spacing:.28em;text-transform:uppercase;padding:6px 12px;font-weight:500;
-    }
-    .bundle .badge.dark{background:var(--navy);color:var(--gold)}
-    .bundle.selected{
-      border:2px solid var(--navy);background:#fff;
-      box-shadow:0 12px 40px -16px rgba(196,147,42,.6),0 0 0 1px var(--gold) inset;
-      padding:21px 23px;
-    }
-    .bundle.selected .radio{border-color:var(--navy)}
-    .bundle.selected .radio::after{transform:scale(1)}
-    .selected-summary{
-      margin:32px auto 22px;max-width:560px;text-align:center;
-      border-top:1px solid rgba(196,147,42,.4);border-bottom:1px solid rgba(196,147,42,.4);
-      padding:20px 10px;position:relative;
-    }
-    .selected-summary::before, .selected-summary::after{
-      content:"";position:absolute;left:50%;transform:translateX(-50%);
-      width:14px;height:14px;background:var(--cream);border:1px solid var(--gold);
-      transform:translateX(-50%) rotate(45deg);
-    }
-    .selected-summary::before{top:-7px}
-    .selected-summary::after{bottom:-7px}
-    .selected-summary .lbl{color:var(--gold);font-size:10px;letter-spacing:.4em;text-transform:uppercase;margin-bottom:8px}
-    .selected-summary .total{font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--navy);line-height:1}
-    .selected-summary .total .unit{font-size:18px;color:var(--gold);letter-spacing:.1em;margin-left:8px}
-    .cta-primary{
-      display:block;width:100%;max-width:560px;margin:0 auto;
-      background:var(--navy);color:var(--gold);border:none;border-radius:0;height:64px;
-      font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.34em;text-transform:uppercase;font-weight:500;
-      transition:background .2s ease, letter-spacing .2s ease;
-    }
-    .cta-primary:hover{background:var(--navy-deep);letter-spacing:.38em}
-    .cta-primary .arrow{margin-left:10px;display:inline-block;transition:transform .2s ease}
-    .cta-primary:hover .arrow{transform:translateX(4px)}
-    @media (max-width:420px){
-      .bundle{padding:18px 18px;gap:12px}
-      .bundle .name{font-size:20px}
-      .bundle .price{font-size:22px}
-    }
-    /* Bundle visual panel */
-    .bundles-layout{
-      display:flex;flex-direction:column;gap:32px;
-      max-width:560px;margin:0 auto;
-    }
-    .bundle-visual{
-      width:100%;aspect-ratio:4/3;overflow:hidden;
-      border:1px solid var(--gold);
-    }
-    .bundle-visual img{
-      width:100%;height:100%;object-fit:cover;
-      transition:opacity 0.3s ease, transform 0.3s ease;
-      display:block;
-    }
-    @media (min-width:880px){
-      .bundles-layout{
-        flex-direction:row;align-items:flex-start;
-        max-width:980px;gap:48px;
-      }
-      .bundles-layout .bundles{flex:1;max-width:none;margin:0}
-      .bundle-visual{
-        width:380px;flex-shrink:0;aspect-ratio:auto;
-        align-self:stretch;min-height:320px;
-      }
-    }
-  </style>
-  <section class="bundles-section" id="bundles-section">
-    <div class="section-title">
-      <div class="kicker" data-lang data-en="Choose your pack" data-fr="Choisissez votre coffret" data-darija="اختارو الباك ديالكم">Choose your pack</div>
-      <h2 data-lang data-lang-html data-en="Select your <em>ritual</em>" data-fr="Composez votre <em>rituel</em>" data-darija="اختارو <em>العادة</em> ديالكم">Select your <em>ritual</em></h2>
-      <div class="ornament"><span class="ln"></span><svg><use href="#diamond"/></svg><span class="ln"></span></div>
-      <p class="lede" data-lang data-en="All packs ship from Casablanca with free delivery across Morocco. Pay on delivery." data-fr="Tous les coffrets partent de Casablanca, livraison gratuite partout au Maroc. Paiement à la livraison." data-darija="كاع الباكات كتخرج من الدار البيضاء، التوصيل مجاني فجميع البلاد. تخلصي غير فالمكان.">All packs ship from Casablanca with free delivery across Morocco. Pay on delivery.</p>
-    </div>
+  <section id="parfums">
+    <div class="container">
+      <p class="section-kicker">Personnalisation</p>
+      <h2 class="section-title">Choisis ton parfum</h2>
+      <p style="color:var(--muted)">8 fragrances au lancement — ton huile et ton beurre arrivent dans le même parfum.</p>
 
-    <div class="bundles-layout">
-    <div class="bundles" id="bundles" role="radiogroup" data-aria-en="Select pack" data-aria-fr="Choisir un coffret" data-aria-darija="اختار الباك" aria-label="Select pack">
-      <div class="bundle" data-id="single" data-name-en="1 Jar" data-name-fr="1 pot" data-name-darija="علبة وحدة" data-price="199" data-units="1" role="radio" aria-checked="false" tabindex="0">
-        <div class="radio" aria-hidden="true"></div>
-        <div class="info">
-          <div class="name" data-lang data-lang-html data-en="1 Jar" data-fr="1 pot" data-darija="علبة وحدة">1 Jar</div>
-          <div class="meta" data-lang data-en="100g · Try it first" data-fr="100 g · Pour essayer" data-darija="100 غ · جرّبها الأول">100g · Try it first</div>
-        </div>
-        <div class="price"><span>199 MAD</span></div>
+      <div class="scents-grid" id="scentGrid">
+        <div class="scent-card" data-scent="Fruits Rouges"><h4>Fruits Rouges</h4><p>Baies rouges, fleurs fraîches, musc léger</p></div>
+        <div class="scent-card" data-scent="Vanille Dorée"><h4>Vanille Dorée</h4><p>Vanille riche, ambre chaud, caramel</p></div>
+        <div class="scent-card" data-scent="Musc Blanc"><h4>Musc Blanc</h4><p>Musc blanc, peau propre, doux</p></div>
+        <div class="scent-card" data-scent="Nuit Noire"><h4>Nuit Noire</h4><p>Café floral, vanille, patchouli</p></div>
+        <div class="scent-card" data-scent="Rose Satinee"><h4>Rose Satinee</h4><p>Rose, pivoine, musc</p></div>
+        <div class="scent-card" data-scent="Coco Velours"><h4>Coco Velours</h4><p>Noix de coco, vanille, tropical</p></div>
+        <div class="scent-card" data-scent="Ambre Doux"><h4>Ambre Doux</h4><p>Ambre, bois de santal, oud léger</p></div>
+        <div class="scent-card" data-scent="Jasmin Soleil"><h4>Jasmin Soleil</h4><p>Jasmin, bergamote, frais</p></div>
       </div>
 
-      <div class="bundle selected" data-id="double" data-name-en="2 Jars" data-name-fr="2 pots" data-name-darija="جوج مراتب" data-price="319" data-units="2" role="radio" aria-checked="true" tabindex="0">
-        <div class="badge" data-lang data-en="Most Popular" data-fr="Le plus populaire" data-darija="الأكثر طلبًا">Most Popular</div>
-        <div class="radio" aria-hidden="true"></div>
-        <div class="info">
-          <div class="name" data-lang data-lang-html data-en="2 Jars" data-fr="2 pots" data-darija="جوج مراتب">2 Jars</div>
-          <div class="meta" data-lang data-en="200g · One for you, one to share" data-fr="200 g · Pour vous et à offrir" data-darija="200 غ · وحدة ليك وحدة لصاحبك">200g · One for you, one to share</div>
-          <div class="save" data-lang data-en="Save 79 MAD" data-fr="Économisez 79 MAD" data-darija="تربحي 79 درهم">Save 79 MAD</div>
-        </div>
-        <div class="price">
-          <span class="strike">398 MAD</span>
-          <span>319 MAD</span>
-        </div>
-      </div>
-
-      <div class="bundle" data-id="trio" data-name-en="3 Jars + Free Rose Water" data-name-fr="3 pots + eau de rose offerte" data-name-darija="3 مراتب + ماء ورد هدية" data-price="498" data-units="3" role="radio" aria-checked="false" tabindex="0">
-        <div class="radio" aria-hidden="true"></div>
-        <div class="info">
-          <div class="name" data-lang data-lang-html data-en="3 Jars <span style=&quot;font-size:14px;color:var(--gold);font-style:italic&quot;>+ Free Rose Water</span>" data-fr="3 pots <span style=&quot;font-size:14px;color:var(--gold);font-style:italic&quot;>+ eau de rose offerte</span>" data-darija="3 مراتب <span style=&quot;font-size:14px;color:var(--gold);font-style:italic&quot;>+ ماء ورد هدية</span>">3 Jars <span style="font-size:14px;color:var(--gold);font-style:italic">+ Free Rose Water</span></div>
-          <div class="meta" data-lang data-en="300g · Full ritual set" data-fr="300 g · Rituel complet" data-darija="300 غ · باك كامل للعناية">300g · Full ritual set</div>
-          <div class="save" data-lang data-en="Includes 100ml rose water bottle — free" data-fr="Flacon d’eau de rose 100 ml inclus — offert" data-darija="فيه زجاجة ماء ورد 100 مل هدية معاه">Includes 100ml rose water bottle — free</div>
-        </div>
-        <div class="price">
-          <span class="strike">597 MAD</span>
-          <span>498 MAD</span>
-        </div>
-      </div>
+      <p style="margin-top:28px;text-align:center">
+        <img src="assets/img/06-notes-parfums-8-scents.png" alt="Menu des 8 parfums SAHRI SKIN" style="margin:0 auto;border-radius:var(--radius);box-shadow:var(--shadow)" loading="lazy" />
+      </p>
     </div>
-
-    <div class="bundle-visual frame" id="bundle-visual" aria-hidden="true">
-      <span class="corner tl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-      <span class="corner tr"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-      <span class="corner bl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-      <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-      <img id="bundle-visual-img" src="uploads/bundle-2-jars.webp" alt="Selected bundle product image" loading="lazy" decoding="async" data-lang data-en="Selected bundle product image" data-fr="Image du coffret sélectionné" data-darija="صورة الباك اللي اختارتي" />
-    </div>
-    </div><!-- /.bundles-layout -->
-
-    <div class="selected-summary" aria-live="polite">
-      <div class="lbl" data-lang data-en="Your total" data-fr="Votre total" data-darija="المجموع ديالك">Your total</div>
-      <div class="total"><span id="summary-price">319</span><span class="unit">MAD</span></div>
-    </div>
-
-    <button class="cta-primary" id="cta-order" type="button" data-lang data-lang-html data-en="DM us to order <span class=&quot;arrow&quot;>→</span>" data-fr="Écrivez-nous pour commander <span class=&quot;arrow&quot;>→</span>" data-darija="راسلونا باش تطلبو <span class=&quot;arrow&quot;>→</span>">
-      DM us to order <span class="arrow">→</span>
-    </button>
   </section>
 
-  <!-- ============ 6. RAW INGREDIENT SHOWCASE ============ -->
-  <style>
-    .raw{background:var(--offwhite);padding:80px 22px;border-top:1px solid rgba(196,147,42,.4);border-bottom:1px solid rgba(196,147,42,.4)}
-    .raw-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-    .raw-media{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .raw-media .frame{aspect-ratio:1/1}
-    .raw-media .frame:first-child{transform:translateY(-22px)}
-    .raw-media .frame:last-child{transform:translateY(22px)}
-    .raw-copy h2{font-size:46px;line-height:1.05}
-    .raw-copy h2 em{color:var(--gold);font-style:italic;font-weight:400}
-    .raw-copy .lede{margin:18px 0 24px;font-size:16px;line-height:1.75;color:#3a3a3a}
-    .raw-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
-    .raw-list li{
-      display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:flex-start;
-      padding-bottom:14px;border-bottom:1px solid rgba(196,147,42,.3);
-    }
-    .raw-list li:last-child{border-bottom:0;padding-bottom:0}
-    .raw-list .mark{
-      width:36px;height:36px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;
-      color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;
-      position:relative;flex:0 0 36px;
-    }
-    .raw-list .mark::before, .raw-list .mark::after{
-      content:"";position:absolute;width:6px;height:6px;border:1px solid var(--gold);
-    }
-    .raw-list .mark::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
-    .raw-list .mark::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
-    .raw-list h4{font-size:18px;color:var(--navy);font-weight:500;margin-bottom:4px}
-    .raw-list p{font-size:14.5px;color:#3a3a3a;line-height:1.6}
-    @media (max-width:880px){
-      .raw-grid{grid-template-columns:1fr;gap:36px}
-      .raw-copy h2{font-size:34px}
-      .raw-media .frame:first-child{transform:none}
-      .raw-media .frame:last-child{transform:none}
-    }
-  </style>
-  <section class="raw">
-    <div class="raw-grid">
-      <div class="raw-media">
-        <div class="frame">
-          <span class="corner tl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner tr"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner bl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <img src="assets/nila-raw.jpg" alt="Raw Nila stones — deep indigo, unprocessed" loading="lazy" decoding="async" data-lang data-en="Raw Nila stones — deep indigo, unprocessed" data-fr="Pierres de Nila brutes — indigo profond, non traitées" data-darija="حجيرات Nila خام — لونها غامق وحقيقي" />
+  <section class="bg-navy" id="avantages">
+    <div class="container">
+      <p class="section-kicker">Pourquoi SAHRI SKIN</p>
+      <h2 class="section-title">Naturel. Personnalisé. Complet.</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Naturel</h3>
+          <p>Huile d'amande marocaine et beurre corporel sans remplissage synthétique — qualité qu'on sent.</p>
         </div>
-        <div class="frame">
-          <span class="corner tl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner tr"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner bl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <img src="uploads/marketing-product-hero.webp" alt="SAHRI BEAUTY Nila jar — clean studio" loading="lazy" decoding="async" data-lang data-en="SAHRI BEAUTY Nila jar — clean studio" data-fr="SAHRI BEAUTY — pot Nila, studio épuré" data-darija="SAHRI BEAUTY — مرطبان Nila فالستوديو" />
+        <div class="benefit-card">
+          <h3>Personnalisé</h3>
+          <p>Tu choisis ton parfum. Ton huile parfumée et ton beurre arrivent dans ta fragrance.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Complet</h3>
+          <p>Rituel corps et cheveux. Le diffuseur offert complète l'expérience cadeau.</p>
         </div>
       </div>
-      <div class="raw-copy">
-        <div class="eyebrow" style="color:var(--gold);font-size:10px;letter-spacing:.4em;text-transform:uppercase;margin-bottom:14px" data-lang data-en="The Difference" data-fr="La différence" data-darija="شنو كيميّزنا">The Difference</div>
-        <h2 data-lang data-lang-html data-en="Not all Nila is <em>real Nila.</em>" data-fr="Toute Nila n’est pas une <em>vraie Nila.</em>" data-darija="ماشي كاع اللي كيقولو Nila هوا <em>Nila حقيقية.</em>">Not all Nila is <em>real Nila.</em></h2>
-        <p class="lede" data-lang data-en="The Nila sold in most markets is diluted, mixed, or substituted with grey clays. Real Nila from Dakhla is unmistakable — deep, vivid indigo. Never grey. Never brown." data-fr="La Nila vendue sur les marchés ou en ligne est souvent diluée, mélangée ou remplacée par des argiles grises. La vraie Nila de Dakhla se reconnaît tout de suite : un indigo profond et vivant. Jamais grise. Jamais brune." data-darija="Nila اللي كتتباع فالأسواق ولا على النت ولا فتيك توك كاتكون مخففة ولا مخلوطة ولا بالرمادي. أما Nila من دخلة كاتبان بلي هي هي — لونها غامق وواضح. ماشي رمادية، ماشي كحلة باش كدبو عليك.">
-          The Nila sold in most markets is diluted, mixed, or substituted with grey clays.
-          Real Nila from Dakhla is unmistakable — deep, vivid indigo. Never grey. Never brown.
-        </p>
-        <ul class="raw-list">
-          <li>
-            <div class="mark">i</div>
-            <div>
-              <h4 data-lang data-en="Stone, then powder" data-fr="Pierre, puis poudre" data-darija="حجرة، من بعد تتحن">Stone, then powder</h4>
-              <p data-lang data-en="Selected as whole raw stones from the cooperative, milled fresh in small batches." data-fr="Sélectionnées en pierres brutes auprès de la coopérative, moulues à la demande en petites séries." data-darija="كانتختار كحجيرات خام من التعاونية، وكانتطحن على مهل فكميات صغيرة.">Selected as whole raw stones from the cooperative, milled fresh in small batches.</p>
-            </div>
-          </li>
-          <li>
-            <div class="mark">ii</div>
-            <div>
-              <h4 data-lang data-en="One ingredient. That's it." data-fr="Un seul ingrédient. C’est tout." data-darija="مكوّن وحيد. سالينا.">One ingredient. That's it.</h4>
-              <p data-lang data-en="No fillers, no fragrance, no preservatives. Just pure milled indigo." data-fr="Sans charges, sans parfum, sans conservateurs. Juste de l’indigo pur moulu." data-darija="مافيهاش حشو، مافيهاش عطور، مافيهاش مواد حافظة. غير Nila نقية محكوكة.">No fillers, no fragrance, no preservatives. Just pure milled indigo.</p>
-            </div>
-          </li>
-          <li>
-            <div class="mark">iii</div>
-            <div>
-              <h4 data-lang data-en="Tested at the source" data-fr="Contrôlée à la source" data-darija="كانتختبر من عند المصدر">Tested at the source</h4>
-              <p data-lang data-en="Each batch is verified for color depth and purity before it ever leaves Dakhla." data-fr="Chaque lot est vérifié pour sa profondeur de couleur et sa pureté avant de quitter Dakhla." data-darija="كولشي دفعة كانتفحص على اللون والنقاوة قبل ما تخرج من دخلة.">Each batch is verified for color depth and purity before it ever leaves Dakhla.</p>
-            </div>
-          </li>
+      <p style="margin-top:32px;text-align:center">
+        <img src="assets/img/07-avantages-pack.png" alt="Avantages du pack SAHRI SKIN" style="margin:0 auto;max-width:900px;border-radius:var(--radius)" loading="lazy" />
+      </p>
+    </div>
+  </section>
+
+  <section id="resultats" class="bg-white">
+    <div class="container">
+      <p class="section-kicker">Résultats</p>
+      <h2 class="section-title">Avant et après le rituel</h2>
+      <div class="gallery-2">
+        <img src="assets/img/04-avant-apres-peau.png" alt="Avant après peau hydratée SAHRI SKIN" loading="lazy" />
+        <img src="assets/img/05-avant-apres-cheveux.png" alt="Avant après cheveux brillants Huile d'Amande Parfumée" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section id="rituel">
+    <div class="container">
+      <p class="section-kicker">Le rituel</p>
+      <h2 class="section-title">Corps et cheveux, même parfum</h2>
+      <div class="gallery-3">
+        <img src="assets/img/03-hero-rituel-corps.png" alt="Rituel corps huile d'amande parfumée" loading="lazy" />
+        <img src="assets/img/10-rituel-huile-cheveux.png" alt="Huile d'Amande Parfumée sur les cheveux" loading="lazy" />
+        <img src="assets/img/08-rituel-beurre-artistique.png" alt="Beurre corporel après la douche" loading="lazy" />
+      </div>
+      <p style="margin-top:24px;text-align:center;color:var(--muted);font-size:0.95rem">
+        Après la douche : huile sur peau humide, beurre par-dessus, quelques pulvérisations dans les cheveux.
+      </p>
+      <div class="gallery-2" style="margin-top:32px">
+        <img src="assets/img/11-texture-detail-produits.png" alt="Texture beurre et huile SAHRI SKIN" loading="lazy" />
+        <img src="assets/img/13-ugc-huile-spray-cap.png" alt="UGC Huile d'Amande Parfumée couvercle spray" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section id="cadeau" class="bg-cream" style="background:var(--cream-dark)">
+    <div class="container">
+      <p class="section-kicker">Offrir</p>
+      <h2 class="section-title">Le cadeau qu'elle choisit elle-même</h2>
+      <p style="color:var(--muted);max-width:55ch;margin-bottom:24px">Version gift box 349 MAD — ruban, papier de soie et carte message. Elle choisit son parfum, tu commandes le pack.</p>
+      <img src="assets/img/12-cadeau-gift-box.png" alt="Pack cadeau SAHRI SKIN avec ruban" style="border-radius:var(--radius);box-shadow:var(--shadow);max-width:800px;margin:0 auto" loading="lazy" />
+    </div>
+  </section>
+
+  <section id="commander" class="order-section">
+    <div class="container order-grid">
+      <div>
+        <p class="section-kicker">Commander</p>
+        <h2 class="section-title">Paiement à la livraison</h2>
+        <p style="color:var(--muted)">Remplis le formulaire — nous te contactons pour confirmer ton parfum et ton adresse. Livraison via Amana, paiement à la réception.</p>
+        <ul style="margin-top:24px;padding-left:1.2em;color:var(--navy)">
+          <li>Pack standard — <strong>299 MAD</strong></li>
+          <li>Gift box (ruban + carte) — <strong>349 MAD</strong></li>
+          <li>Huile d'Amande Parfumée · Beurre 100g · Diffuseur 30ml offert</li>
         </ul>
       </div>
+
+      <form class="order-form" id="orderForm">
+        <div class="form-group">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Téléphone WhatsApp</label>
+          <input type="tel" id="phone" name="phone" required placeholder="06 XX XX XX XX" />
+        </div>
+        <div class="form-group">
+          <label for="city">Ville</label>
+          <input type="text" id="city" name="city" required placeholder="Casablanca, Rabat…" />
+        </div>
+        <div class="form-group">
+          <label for="scent">Parfum choisi</label>
+          <select id="scent" name="scent" required>
+            <option value="">— Sélectionner —</option>
+            <option>Fruits Rouges</option>
+            <option>Vanille Dorée</option>
+            <option>Musc Blanc</option>
+            <option>Nuit Noire</option>
+            <option>Rose Satinee</option>
+            <option>Coco Velours</option>
+            <option>Ambre Doux</option>
+            <option>Jasmin Soleil</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Format</label>
+          <div class="pack-options">
+            <label class="pack-option">
+              <input type="radio" name="pack" value="299" checked />
+              <span>Pack standard — 299 MAD</span>
+            </label>
+            <label class="pack-option">
+              <input type="radio" name="pack" value="349" />
+              <span>Gift box — 349 MAD</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="notes">Message (optionnel)</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Adresse, occasion cadeau…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width:100%">Envoyer ma commande</button>
+        <p style="font-size:0.75rem;color:var(--muted);margin-top:12px;text-align:center">Ou écris-nous sur Instagram <a href="https://instagram.com/sahriskin" style="color:var(--gold)">@sahriskin</a></p>
+      </form>
     </div>
   </section>
 
-  <!-- ============ 7. HOW TO USE — ritual ============ -->
-  <style>
-    .ritual{background:var(--cream-light);padding:80px 22px}
-    .ritual-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-    .ritual-card{
-      background:var(--offwhite);padding:32px 26px 28px;position:relative;
-      border:1px solid rgba(196,147,42,.5);
-      display:flex;flex-direction:column;gap:14px;
-    }
-    .ritual-card::before, .ritual-card::after{
-      content:"";position:absolute;width:14px;height:14px;border:1px solid var(--gold);
-    }
-    .ritual-card::before{top:8px;left:8px;border-right:0;border-bottom:0}
-    .ritual-card::after{bottom:8px;right:8px;border-left:0;border-top:0}
-    .ritual-card .num{
-      font-family:'Cormorant Garamond',serif;font-style:italic;font-size:52px;color:var(--gold);line-height:1;
-    }
-    .ritual-card h3{font-size:24px;color:var(--navy);font-weight:500}
-    .ritual-card p{color:#3a3a3a;font-size:15px;line-height:1.7}
-    .ritual-card .ic{
-      width:36px;height:36px;color:var(--gold);position:absolute;top:24px;right:24px;
-    }
-    .ritual-card .ic svg{width:100%;height:100%}
-    @media (max-width:760px){.ritual-grid{grid-template-columns:1fr}}
-  </style>
-  <section class="ritual" id="how">
-    <div class="section-title">
-      <div class="kicker" data-lang data-en="The ritual" data-fr="Le rituel" data-darija="العادة">The ritual</div>
-      <h2 data-lang data-lang-html data-en="Three steps, <em>once a week.</em>" data-fr="Trois gestes, <em>une fois par semaine.</em>" data-darija="ثلاث خطوات، <em>مرة فالسبوع.</em>">Three steps, <em>once a week.</em></h2>
-      <div class="ornament"><span class="ln"></span><svg><use href="#diamond"/></svg><span class="ln"></span></div>
-    </div>
-    <div class="ritual-grid">
-      <div class="ritual-card">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 9h14l-1 10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 9zM9 9V6a3 3 0 1 1 6 0v3"/></svg></span>
-        <div class="num">01</div>
-        <h3 data-lang data-en="Mix" data-fr="Mélanger" data-darija="خلط">Mix</h3>
-        <p data-lang data-en="Combine one teaspoon of SAHRI BEAUTY Nila with rose water until you form a smooth, deep-indigo paste. Let it bloom for a minute." data-fr="Mélangez une cuillère à café de Nila SAHRI BEAUTY avec de l’eau de rose jusqu’à obtenir une pâte lisse, d’un indigo profond. Laissez-la s’ouvrir une minute." data-darija="ديري معلقة صغيرة ديال Nila ديال SAHRI BEAUTY مع ماء الورد حتى يولي عجين ناعم ولونو غامق. خليها ترتاح دقيقة.">Combine one teaspoon of SAHRI BEAUTY Nila with rose water until you form a smooth, deep-indigo paste. Let it bloom for a minute.</p>
-      </div>
-      <div class="ritual-card">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 4c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10z"/><path d="M10 14c.5 1.5 1.5 2.5 3 3" stroke-linecap="round"/></svg></span>
-        <div class="num">02</div>
-        <h3 data-lang data-en="Apply" data-fr="Appliquer" data-darija="دهن">Apply</h3>
-        <p data-lang data-en="Sweep onto clean skin with a soft brush, in even strokes. Leave for 10 minutes — until the mask is touch-dry but still cool." data-fr="Appliquez sur une peau nette avec un pinceau doux, en gestes réguliers. Laissez poser 10 minutes — jusqu’à ce que le masque soit sec au toucher mais encore frais." data-darija="دهنيها على وجهك نقي بفرشاة ناعمة، بخطوط مزيانة. خليها 10 دقايق — حتى تشوفي الماسك نشف شوية وما زال بارد.">Sweep onto clean skin with a soft brush, in even strokes. Leave for 10 minutes — until the mask is touch-dry but still cool.</p>
-      </div>
-      <div class="ritual-card">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span>
-        <div class="num">03</div>
-        <h3 data-lang data-en="Reveal" data-fr="Révéler" data-darija="شطف">Reveal</h3>
-        <p data-lang data-en="Rinse with lukewarm water. Pat dry. Skin looks brighter, smoother, more even-toned. Use two to three times a week." data-fr="Rincez à l’eau tiède. Tamponnez délicatement. Le teint paraît plus lumineux, plus lisse, plus uniforme. Deux à trois fois par semaine." data-darija="غسليها بما سخون شوية. نشفيها برفق. الوجه كيبان أوضح وناعم وموحّد. ديريها جوج ولا ثلاث مرات فالسبوع.">Rinse with lukewarm water. Pat dry. Skin looks brighter, smoother, more even-toned. Use two to three times a week.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 8. UGC / TESTIMONIAL FEATURE ============ -->
-  <style>
-    .feature{background:var(--cream);padding:80px 22px;position:relative;border-top:1px solid rgba(196,147,42,.4)}
-    .feature-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-    .feature-media .frame{aspect-ratio:5/6}
-    .feature-copy .stars{color:var(--gold);font-size:18px;letter-spacing:.18em;margin-bottom:20px}
-    .feature-copy h2{font-size:44px;line-height:1.1;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;color:var(--navy)}
-    .feature-copy h2 .open{color:var(--gold);font-style:normal;font-size:80px;line-height:0;vertical-align:-30px;margin-right:6px;font-family:'Cormorant Garamond',serif}
-    .feature-copy .quote{margin-top:24px;font-size:17px;color:#3a3a3a;line-height:1.75;max-width:520px}
-    .feature-copy .author{margin-top:28px;display:flex;align-items:center;gap:14px}
-    .feature-copy .author .rule{width:36px;height:1px;background:var(--gold)}
-    .feature-copy .author .name{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--navy)}
-    .feature-copy .author .city{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-left:10px}
-    .feature-stats{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:520px;border-top:1px solid rgba(196,147,42,.4);padding-top:24px}
-    .feature-stat .v{font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--navy);line-height:1}
-    .feature-stat .v em{color:var(--gold);font-style:italic;font-weight:400}
-    .feature-stat .l{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-top:6px}
-    @media (max-width:880px){
-      .feature-grid{grid-template-columns:1fr;gap:36px}
-      .feature-copy h2{font-size:32px}
-    }
-  </style>
-  <section class="feature">
-    <div class="feature-grid">
-      <div class="feature-media">
-        <div class="frame">
-          <span class="corner tl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner tr"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner bl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="ornament-strip top" style="background:var(--cream)"><svg><use href="#floret"/></svg></span>
-          <span class="ornament-strip bot" style="background:var(--cream)"><svg><use href="#floret"/></svg></span>
-          <img src="ugc sahri.png" alt="Customer holding SAHRI BEAUTY jar" loading="lazy" decoding="async" data-lang data-en="Customer holding SAHRI BEAUTY jar" data-fr="Cliente tenant un pot SAHRI BEAUTY" data-darija="زبونة كتمسك مرطبان SAHRI BEAUTY" />
-        </div>
-      </div>
-      <div class="feature-copy">
-        <div class="stars">★ ★ ★ ★ ★</div>
-        <h2 data-lang data-lang-html data-en="<span class=&quot;open&quot;>“</span>The first Nila I have used that feels like the one my grandmother kept in a glass jar — deep, real, alive." data-fr="<span class=&quot;open&quot;>“</span>La première Nila qui me rappelle celle que ma grand-mère gardait dans un bocal — profonde, vraie, vivante." data-darija="<span class=&quot;open&quot;>“</span>أول Nila حسّيت بيها بحال اللي كانت جدّاتي كاتخبيها فمرطبان — غامقة، حقيقية، حيّة."><span class="open">“</span>The first Nila I have used that feels like the one my grandmother kept in a glass jar — deep, real, alive.</h2>
-        <p class="quote" data-lang data-en="After three weeks, my skin looks calmer and brighter. The little dark spots on my cheeks have faded. No drying, no irritation. It is exactly what it claims to be." data-fr="Après trois semaines, ma peau paraît plus apaisée et plus lumineuse. Les petites taches sur mes joues se sont estompées. Pas de dessèchement, pas d’irritation. C’est exactement ce qu’elle promet." data-darija="من بعد ثلاثة أسابيع، الوجه ولّى هادي ومزيان. البقع الصغار على الخدود بداو يطيو. ماشي نشف، ماشي كيحرق. هي هي اللي كيقولو عليها.">After three weeks, my skin looks calmer and brighter. The little dark spots on my cheeks have faded. No drying, no irritation. It is exactly what it claims to be.</p>
-        <div class="author">
-          <span class="rule"></span>
-          <span class="name">Salma A.</span>
-          <span class="city">Casablanca</span>
-        </div>
-        <div class="feature-stats">
-          <div class="feature-stat"><div class="v">98<em>%</em></div><div class="l" data-lang data-en="Would repurchase" data-fr="Rachèteraient" data-darija="كايرجعو يشروها">Would repurchase</div></div>
-          <div class="feature-stat"><div class="v">+14<em>d</em></div><div class="l" data-lang data-en="Visible results" data-fr="Résultats visibles" data-darija="نتيجة بينا">Visible results</div></div>
-          <div class="feature-stat"><div class="v">2,400<em>+</em></div><div class="l" data-lang data-en="Happy customers" data-fr="Clientes satisfaites" data-darija="زبناء فرحانين">Happy customers</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 9. SOURCING STORY ============ -->
-  <style>
-    .story{
-      background:var(--navy);color:var(--cream);padding:90px 22px;position:relative;
-      border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);
-    }
-    .story-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-    .story-media .frame{
-      aspect-ratio:4/5;
-      background:linear-gradient(135deg,rgba(196,147,42,.18),rgba(196,147,42,0) 35%,rgba(196,147,42,0) 65%,rgba(196,147,42,.18)),var(--navy-deep);
-    }
-    .story-media .frame::before{border-color:rgba(217,176,87,.6)}
-    .story-media .frame::after{border-color:rgba(217,176,87,.9)}
-    .story-media .frame .corner{color:var(--gold-pale)}
-    .story-media .frame .ornament-strip{background:var(--navy);color:var(--gold-pale)}
-    .story-copy .kicker{color:var(--gold-pale);font-size:10px;letter-spacing:.4em;text-transform:uppercase;margin-bottom:14px}
-    .story-copy h2{font-size:46px;line-height:1.08;color:var(--cream)}
-    .story-copy h2 em{color:var(--gold-pale);font-style:italic;font-weight:400}
-    .story-copy .body{margin-top:20px;font-size:16px;line-height:1.8;color:rgba(245,237,214,.85);max-width:540px}
-    .story-copy .origin{
-      margin-top:28px;display:inline-flex;align-items:center;gap:12px;
-      font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-pale);
-    }
-    .story-copy .origin::before, .story-copy .origin::after{
-      content:"";width:24px;height:1px;background:var(--gold-pale);
-    }
-    .story-signature{margin-top:36px;display:flex;align-items:center;gap:14px}
-    .story-signature .seal{
-      width:64px;height:64px;border:1px solid var(--gold-pale);display:flex;align-items:center;justify-content:center;
-      border-radius:50%;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-pale);font-size:20px;
-      position:relative;
-    }
-    .story-signature .seal::before{content:"";position:absolute;inset:4px;border:1px dashed rgba(217,176,87,.45);border-radius:50%}
-    .story-signature .who{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--cream)}
-    .story-signature .who .role{display:block;font-style:normal;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-pale);margin-top:4px}
-    @media (max-width:880px){
-      .story-grid{grid-template-columns:1fr;gap:36px}
-      .story-copy h2{font-size:34px}
-    }
-  </style>
-  <section class="story" id="story">
-    <div class="story-grid">
-      <div class="story-media">
-        <div class="frame" style="background:url('assets/sahara-dunes.webp') center/cover no-repeat">
-          <span class="corner tl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner tr"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner bl"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="corner br"><svg viewBox="0 0 40 40"><use href="#corner-orn"/></svg></span>
-          <span class="ornament-strip top"><svg><use href="#diamond"/></svg></span>
-          <span class="ornament-strip bot"><svg><use href="#diamond"/></svg></span>
-          <span class="ph" id="story-img" style="background:transparent"></span>
-        </div>
-      </div>
-      <div class="story-copy">
-        <div class="kicker" data-lang data-en="Our story" data-fr="Notre histoire" data-darija="حكايتنا">Our story</div>
-        <h2 data-lang data-lang-html data-en="Sourced at origin.<br><em>Nothing added.</em>" data-fr="À la source.<br><em>Rien n’est ajouté.</em>" data-darija="من عند المصدر.<br><em>ما زدنا والو.</em>">Sourced at origin.<br><em>Nothing added.</em></h2>
-        <p class="body" data-lang data-en="Most Moroccan beauty brands source their ingredients through distributors — sometimes from outside Morocco entirely. SAHRI BEAUTY is different. Our Nila comes directly from cooperatives on the Saharan Atlantic coast, in Dakhla. We know exactly where it comes from. You will too — every jar carries the batch number of the cooperative that milled it." data-fr="Beaucoup de maisons marocaines passent par des distributeurs — parfois même hors du Maroc. SAHRI BEAUTY, c’est autrement. Notre Nila arrive directement des coopératives de la côte atlantique saharienne, à Dakhla. Nous savons d’où elle vient. Vous le saurez aussi : chaque pot porte le numéro de lot de la coopérative qui l’a moulu." data-darija="بزاف ديال الماركات كيجيبو المكوّنات من وسطاء — وحتى من برا المغرب أحيانًا. SAHRI BEAUTY ماشي بحالهم. Nila ديالنا كاتجي مباشرة من التعاونيات على الساحل الصحراوي، من دخلة. كنعلمو منين جاية، ونتوما غادي تعرفو هي هي — كولشي مرطبان فيه رقم الدفعة ديال التعاونية اللي طحنتو.">
-          Most Moroccan beauty brands source their ingredients through distributors — sometimes
-          from outside Morocco entirely. SAHRI BEAUTY is different. Our Nila comes directly from
-          cooperatives on the Saharan Atlantic coast, in Dakhla. We know exactly where it comes
-          from. You will too — every jar carries the batch number of the cooperative that milled it.
-        </p>
-        <div class="origin" data-lang data-en="Dakhla · Saharan Atlantic Coast · Morocco" data-fr="Dakhla · Côte atlantique saharienne · Maroc" data-darija="Dakhla · الساحل الصحراوي · المغرب">Dakhla · Saharan Atlantic Coast · Morocco</div>
-        <div class="story-signature">
-          <div class="seal">S</div>
-          <div class="who"><span data-lang data-en="— SAHRI BEAUTY" data-fr="— SAHRI BEAUTY" data-darija="— SAHRI BEAUTY">— SAHRI BEAUTY</span><span class="role" data-lang data-en="Founded in Morocco · 2024" data-fr="Fondée au Maroc · 2024" data-darija="تأسست فالمغرب · 2024">Founded in Morocco · 2024</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 10. ORDER FORM ============ -->
-  <style>
-    .order{background:var(--cream);color:var(--ink);padding:80px 22px;position:relative}
-    .order .section-title h2{color:var(--navy)}
-    .order .section-title h2 em{color:var(--gold)}
-    .order-card{
-      max-width:600px;margin:0 auto;background:var(--offwhite);padding:42px 36px;
-      border:1px solid var(--gold);position:relative;
-    }
-    .order-card::before, .order-card::after{
-      content:"";position:absolute;width:18px;height:18px;border:1px solid var(--gold);
-    }
-    .order-card::before{top:8px;left:8px;border-right:0;border-bottom:0}
-    .order-card::after{bottom:8px;right:8px;border-left:0;border-top:0}
-    .order-summary{
-      display:flex;justify-content:space-between;align-items:center;
-      padding:18px 18px;background:var(--cream-light);
-      border:1px solid rgba(196,147,42,.5);margin-bottom:28px;font-size:13px;
-    }
-    .order-summary .label{color:var(--muted);letter-spacing:.22em;text-transform:uppercase;font-size:10px;margin-bottom:4px}
-    .order-summary .v{font-family:'Cormorant Garamond',serif;color:var(--navy);font-size:22px;line-height:1}
-    .order-summary .right{text-align:right}
-    .field{margin-bottom:20px}
-    .field label{display:block;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--navy);margin-bottom:8px;font-weight:500}
-    .field label .req{color:var(--gold);margin-left:2px}
-    .field input, .field textarea{
-      width:100%;background:#fff;border:1px solid rgba(196,147,42,.5);border-radius:0;padding:14px 14px;
-      font-family:'Jost',sans-serif;font-size:15px;color:var(--ink);
-      transition:border-color .15s ease,box-shadow .15s ease;resize:vertical;
-    }
-    .field input:focus, .field textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 1px var(--navy)}
-    .field.error input, .field.error textarea{border-color:#b94a3b;box-shadow:0 0 0 1px #b94a3b}
-    .field .err-msg{display:none;color:#b94a3b;font-size:11px;margin-top:6px;letter-spacing:.05em}
-    .field.error .err-msg{display:block}
-    .submit-btn{
-      width:100%;background:var(--navy);color:var(--gold);border:none;border-radius:0;height:64px;
-      font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;
-      margin-top:6px;transition:background .2s ease, letter-spacing .2s ease;
-    }
-    .submit-btn:hover{background:var(--navy-deep);letter-spacing:.34em}
-    .form-note{text-align:center;font-size:11px;color:var(--muted);letter-spacing:.12em;margin-top:16px}
-    .form-note .check{color:#3a7a4a}
-    .success-msg{
-      display:none;margin-top:18px;padding:14px 16px;background:#EFF5EC;border-left:3px solid #3a7a4a;
-      color:#1f4a2a;font-size:13px;line-height:1.5;
-    }
-    .success-msg.show{display:block}
-    .order-fields-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    @media (max-width:520px){.order-fields-row{grid-template-columns:1fr}}
-  </style>
-  <section class="order" id="order">
-    <div class="section-title">
-      <div class="kicker" data-lang data-en="Cash on delivery" data-fr="Paiement à la livraison" data-darija="الدفع عند الاستلام">Cash on delivery</div>
-      <h2 data-lang data-lang-html data-en="Place your <em>order</em>" data-fr="Passez votre <em>commande</em>" data-darija="ديري <em>الطلبية</em> ديالك">Place your <em>order</em></h2>
-      <div class="ornament"><span class="ln"></span><svg><use href="#diamond"/></svg><span class="ln"></span></div>
-      <p class="lede" data-lang data-en="Fill in your details. We will confirm by WhatsApp within 24 hours." data-fr="Renseignez vos coordonnées. Nous vous confirmons par WhatsApp sous 24 heures." data-darija="عمّري المعلومات. غادي نرجعو ليك فالواتساب فـ 24 ساعة.">Fill in your details. We will confirm by WhatsApp within 24 hours.</p>
-    </div>
-
-    <form class="order-card" id="order-form" novalidate>
-      <div class="order-summary">
-        <div>
-          <div class="label" data-lang data-en="Selected pack" data-fr="Coffret sélectionné" data-darija="الباك اللي اختارتي">Selected pack</div>
-          <div class="v" id="sum-pack">2 Jars</div>
-        </div>
-        <div class="right">
-          <div class="label" data-lang data-en="Total" data-fr="Total" data-darija="المجموع">Total</div>
-          <div class="v"><span id="sum-price">319</span> MAD</div>
-        </div>
-      </div>
-
-      <div class="field" data-name="name">
-        <label data-lang data-lang-html data-en="Full name <span class=&quot;req&quot;>*</span>" data-fr="Nom complet <span class=&quot;req&quot;>*</span>" data-darija="الاسم الكامل <span class=&quot;req&quot;>*</span>">Full name <span class="req">*</span></label>
-        <input type="text" name="name" id="f-name" autocomplete="name" />
-        <div class="err-msg" data-lang data-en="Please enter your full name." data-fr="Veuillez saisir votre nom complet." data-darija="عافاك ديري الاسم الكامل ديالك.">Please enter your full name.</div>
-      </div>
-
-      <div class="order-fields-row">
-        <div class="field" data-name="phone">
-          <label data-lang data-lang-html data-en="Phone <span class=&quot;req&quot;>*</span>" data-fr="Téléphone <span class=&quot;req&quot;>*</span>" data-darija="الهاتف <span class=&quot;req&quot;>*</span>">Phone <span class="req">*</span></label>
-          <input type="tel" name="phone" id="f-phone" autocomplete="tel" placeholder="06XXXXXXXX" />
-          <div class="err-msg" data-lang data-en="Please enter a valid phone number." data-fr="Veuillez saisir un numéro de téléphone valide." data-darija="ديري نمرة هاتف مزيانة.">Please enter a valid phone number.</div>
-        </div>
-        <div class="field" data-name="city">
-          <label data-lang data-lang-html data-en="City <span class=&quot;req&quot;>*</span>" data-fr="Ville <span class=&quot;req&quot;>*</span>" data-darija="المدينة <span class=&quot;req&quot;>*</span>">City <span class="req">*</span></label>
-          <input type="text" name="city" id="f-city" autocomplete="address-level2" />
-          <div class="err-msg" data-lang data-en="Please enter your city." data-fr="Veuillez saisir votre ville." data-darija="ديري المدينة ديالك.">Please enter your city.</div>
-        </div>
-      </div>
-
-      <div class="field" data-name="notes">
-        <label data-lang data-en="Special requests (optional)" data-fr="Demandes particulières (facultatif)" data-darija="ملاحظات (اختياري)">Special requests (optional)</label>
-        <textarea name="notes" id="f-notes" rows="2" data-placeholder-en="Preferred delivery time, gift wrapping, anything else..." data-placeholder-fr="Créneau de livraison, emballage cadeau, autre précision…" data-placeholder-darija="وقت التوصيل اللي يعجبك، هدية، شي حاجة أخرى..."></textarea>
-      </div>
-
-      <input type="hidden" id="f-bundle" name="bundle" value="2 Jars" />
-      <input type="hidden" id="f-price" name="price" value="319" />
-
-      <button type="submit" class="submit-btn" data-lang data-en="Confirm order — Pay on delivery" data-fr="Confirmer la commande — paiement à la livraison" data-darija="أكّدي الطلبية — تخلصي عند الاستلام">
-        Confirm order — Pay on delivery
-      </button>
-
-      <div class="form-note" data-lang data-lang-html data-en="<span class=&quot;check&quot;>✓</span> Your details are private. No online payment required." data-fr="<span class=&quot;check&quot;>✓</span> Vos informations restent confidentielles. Aucun paiement en ligne." data-darija="<span class=&quot;check&quot;>✓</span> المعلومات ديالك محفوظة. مافيش دفع أونلاين.">
-        <span class="check">✓</span> Your details are private. No online payment required.
-      </div>
-
-      <div class="success-msg" id="success-msg" role="status" data-lang data-lang-html data-en="<strong>✓ Redirecting to WhatsApp…</strong><br>Your order will be confirmed within 24 hours." data-fr="<strong>✓ Redirection vers WhatsApp…</strong><br>Votre commande sera confirmée sous 24 heures." data-darija="<strong>✓ كنوجّهوك للواتساب…</strong><br>غادي نأكدو الطلبية فـ 24 ساعة.">
-        <strong>✓ Redirecting to WhatsApp…</strong><br>
-        Your order will be confirmed within 24 hours.
-      </div>
-    </form>
-  </section>
-
-  <!-- ============ 11. TRUST ROW ============ -->
-  <style>
-    .trust{background:var(--navy);color:var(--cream);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:46px 18px}
-    .trust-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .trust-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:10px 14px;gap:12px;border-right:1px solid rgba(196,147,42,.3)}
-    .trust-item:last-child{border-right:0}
-    .trust-item .ic{width:38px;height:38px;color:var(--gold)}
-    .trust-item .lab{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--cream)}
-    .trust-item .sub{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-pale)}
-    @media (max-width:760px){
-      .trust-grid{grid-template-columns:1fr;gap:0}
-      .trust-item{border-right:0;border-bottom:1px solid rgba(196,147,42,.3);padding:18px 14px}
-      .trust-item:last-child{border-bottom:0}
-    }
-  </style>
-  <div class="trust">
-    <div class="trust-grid">
-      <div class="trust-item">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7"/></svg>
-        <div class="lab" data-lang data-en="Delivery across Morocco" data-fr="Livraison partout au Maroc" data-darija="توصيل لجميع البلاد">Delivery across Morocco</div>
-        <div class="sub" data-lang data-en="Free · 24–72h max" data-fr="Gratuit · 24–72 h max" data-darija="مجاني · 24–72 ساعة">Free · 24–72h max</div>
-      </div>
-      <div class="trust-item">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="7" width="18" height="12"/><circle cx="12" cy="13" r="2.5"/><path d="M6 7V5h12v2"/></svg>
-        <div class="lab" data-lang data-en="Pay on delivery" data-fr="Paiement à la livraison" data-darija="تخلصي عند الاستلام">Pay on delivery</div>
-        <div class="sub" data-lang data-en="No card required" data-fr="Sans carte bancaire" data-darija="ما محتاجاش للكارطة">No card required</div>
-      </div>
-      <div class="trust-item">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 21c0-7 4-12 9-13-1 8-5 13-9 13zM12 21c0-7-4-12-9-13 1 8 5 13 9 13z"/></svg>
-        <div class="lab" data-lang data-en="100% natural" data-fr="100 % naturel" data-darija="100% طبيعي">100% natural</div>
-        <div class="sub" data-lang data-en="Single ingredient · Dakhla" data-fr="Un seul ingrédient · Dakhla" data-darija="مكوّن وحيد · Dakhla">Single ingredient · Dakhla</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============ 12. FOOTER ============ -->
-  <style>
-    footer{background:var(--navy-deep);color:var(--cream);text-align:center;padding:60px 20px 32px;position:relative}
-    footer::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;max-width:520px;height:1px;background:var(--gold);opacity:.6}
-    footer .logo .mark{color:var(--cream)}
-    footer .logo .sub{color:var(--gold-pale)}
-    footer .logo .rule{background:var(--gold-pale)}
-    footer .tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--cream);margin:18px auto 28px;max-width:420px}
-    footer .socials{display:flex;justify-content:center;gap:36px;margin:0 0 30px;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-pale)}
-    footer .socials a{display:flex;align-items:center;gap:8px;transition:color .15s ease}
-    footer .socials a:hover{color:var(--cream)}
-    footer .socials svg{width:14px;height:14px}
-    footer .copyright{border-top:1px solid rgba(196,147,42,.3);padding-top:22px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,237,214,.55)}
-  </style>
-  <footer>
-    <div class="logo">
-      <div class="mark">SAHRI</div>
-      <div class="rule"></div>
-      <div class="sub">Beauty</div>
-    </div>
-    <div class="tag" data-lang data-en="Sourced in Dakhla, Morocco — From the Sahara, for your skin." data-fr="Sourcée à Dakhla, Maroc — du Sahara, pour votre peau." data-darija="من دخلة، المغرب — من الصحرا، لجلد ديالك.">Sourced in Dakhla, Morocco — From the Sahara, for your skin.</div>
-    <div class="socials">
-      <a href="#" data-aria-en="Instagram" data-aria-fr="Instagram" data-aria-darija="إنستغرام" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
-        @sahribeauty
+  <footer class="footer">
+    <div class="container">
+      <a href="#" class="logo" style="justify-content:center;margin-bottom:8px">
+        <img src="assets/favicon-sahri-skin.png" alt="" width="48" height="48" />
+        <span class="logo-text">
+          <span class="logo-sahri">SAHRI</span>
+          <span class="logo-skin">SKIN</span>
+        </span>
       </a>
-      <a href="#" data-aria-en="TikTok" data-aria-fr="TikTok" data-aria-darija="تيك توك" aria-label="TikTok">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 4v10a4 4 0 1 1-4-4"/><path d="M14 4c0 3 2 5 5 5"/></svg>
-        @sahribeauty
-      </a>
+      <p class="footer-tagline">Ton corps. Ton parfum.</p>
+      <p>© 2026 SAHRI SKIN · Maroc · Livraison COD</p>
+      <p style="margin-top:12px;font-size:0.75rem;opacity:0.7">sahriskin.com · @sahriskin</p>
     </div>
-    <div class="copyright" data-lang data-en="© 2026 SAHRI BEAUTY. All rights reserved." data-fr="© 2026 SAHRI BEAUTY. Tous droits réservés." data-darija="© 2026 SAHRI BEAUTY. جميع الحقوق محفوظة.">© 2026 SAHRI BEAUTY. All rights reserved.</div>
   </footer>
 
-<script>
-(function(){
-  var STORAGE_KEY = 'sahri-lang';
-  var TITLES = {
-    en: 'SAHRI BEAUTY — Nila Brightening Powder, Dakhla',
-    fr: 'SAHRI BEAUTY — Poudre éclaircissante Nila, Dakhla',
-    darija: 'SAHRI BEAUTY — مسحوق Nila للتفتيح، Dakhla'
-  };
-  function normalizeLang(v){
-    if (v === 'fr' || v === 'darija') return v;
-    return 'en';
-  }
-  function readStoredLang(){
-    try { return normalizeLang(localStorage.getItem(STORAGE_KEY)); } catch (e) { return 'en'; }
-  }
-  function packOrderName(el){
-    var lang = window.__sahriLang || 'en';
-    var k = lang === 'darija' ? 'darija' : lang;
-    return el.getAttribute('data-name-' + k) || el.getAttribute('data-name-en') || '';
-  }
-  window.__sahriLang = 'en';
-  window.packOrderName = packOrderName;
-
-  function applyLang(lang){
-    lang = normalizeLang(lang);
-    window.__sahriLang = lang;
-    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
-
-    var html = document.documentElement;
-    html.setAttribute('data-ui-lang', lang);
-    html.setAttribute('lang', lang === 'darija' ? 'ar' : (lang === 'fr' ? 'fr' : 'en'));
-    html.setAttribute('dir', lang === 'darija' ? 'rtl' : 'ltr');
-
-    document.title = TITLES[lang] || TITLES.en;
-
-    document.querySelectorAll('[data-lang]').forEach(function(el){
-      var raw = el.getAttribute('data-' + lang) || el.getAttribute('data-en');
-      if (raw === null) return;
-      if (el.tagName === 'IMG') {
-        el.setAttribute('alt', raw);
-        return;
-      }
-      if (el.hasAttribute('data-lang-html')) {
-        el.innerHTML = raw;
-        return;
-      }
-      el.textContent = raw;
+  <script>
+    document.getElementById('navToggle')?.addEventListener('click', () => {
+      document.querySelector('.nav').classList.toggle('open');
     });
 
-    document.querySelectorAll('[data-placeholder-en]').forEach(function(el){
-      var ph = el.getAttribute('data-placeholder-' + lang) || el.getAttribute('data-placeholder-en');
-      if (ph !== null) el.setAttribute('placeholder', ph);
+    const scentSelect = document.getElementById('scent');
+    document.querySelectorAll('.scent-card').forEach((card) => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('.scent-card').forEach((c) => c.classList.remove('selected'));
+        card.classList.add('selected');
+        const name = card.dataset.scent;
+        if (scentSelect) scentSelect.value = name;
+      });
     });
 
-    document.querySelectorAll('[data-aria-en]').forEach(function(el){
-      var a = el.getAttribute('data-aria-' + lang) || el.getAttribute('data-aria-en');
-      if (a !== null) el.setAttribute('aria-label', a);
+    document.getElementById('orderForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const pack = fd.get('pack') === '349' ? 'Gift box 349 MAD' : 'Pack standard 299 MAD';
+      const msg = [
+        'Commande SAHRI SKIN',
+        'Nom: ' + fd.get('name'),
+        'Tel: ' + fd.get('phone'),
+        'Ville: ' + fd.get('city'),
+        'Parfum: ' + fd.get('scent'),
+        'Pack: ' + pack,
+        fd.get('notes') ? 'Notes: ' + fd.get('notes') : ''
+      ].filter(Boolean).join('\n');
+
+      const wa = 'https://wa.me/?text=' + encodeURIComponent(msg);
+      window.open(wa, '_blank');
+      alert('Merci — complète l\'envoi sur WhatsApp ou contacte @sahriskin sur Instagram.');
     });
-
-    var sel = document.querySelector('.bundle.selected');
-    var sumPack = document.getElementById('sum-pack');
-    var fBundle = document.getElementById('f-bundle');
-    if (sel && sumPack && fBundle) {
-      var pn = packOrderName(sel);
-      sumPack.textContent = pn;
-      fBundle.value = pn;
-    }
-
-    document.querySelectorAll('[data-lang-btn]').forEach(function(btn){
-      var on = btn.getAttribute('data-lang-btn') === lang;
-      btn.classList.toggle('active', on);
-      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
-  }
-  window.applySahriLang = applyLang;
-
-  applyLang(readStoredLang());
-
-  document.querySelectorAll('[data-lang-btn]').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      applyLang(btn.getAttribute('data-lang-btn'));
-    });
-  });
-})();
-</script>
-
-<script>
-(function(){
-  /* ===================== CONFIG — replace before going live =====================
-     WHATSAPP_NUMBER : international format, no + (e.g. 212612345678)
-     SHEETS_URL      : Google Apps Script deployment URL for order logging
-                       Create spreadsheet at sheets.google.com with columns:
-                       Timestamp | Bundle | Price | Name | Phone | City | Notes | Status
-     TELEGRAM_TOKEN  : token from @BotFather (/newbot)
-     TELEGRAM_CHAT_ID: your chat_id from https://api.telegram.org/bot<TOKEN>/getUpdates
-     ============================================================================ */
-  const WHATSAPP_NUMBER   = '212696943506';
-  const SHEETS_URL        = 'https://script.google.com/macros/s/AKfycbwZFbqiZZFUSKI5ZPmUVcZRBLkDt8mcPbtfhuripOC-IVH4kmpJdGvQZKgX0sgRjKYR/exec';
-  const TELEGRAM_TOKEN    = '8480087153:AAH3eeFyldHpJi55UrsK_99BAGtL8t65W54';
-  const TELEGRAM_CHAT_ID  = '1237332845';
-
-  const bundles = document.querySelectorAll('.bundle');
-  const summaryPrice = document.getElementById('summary-price');
-  const sumPack = document.getElementById('sum-pack');
-  const sumPrice = document.getElementById('sum-price');
-  const fBundle = document.getElementById('f-bundle');
-  const fPrice  = document.getElementById('f-price');
-
-  const visualMap = {
-    'single': 'uploads/bundle-1-jar-sahrawi.webp',
-    'double': 'uploads/bundle-2-jars.webp',
-    'trio':   'uploads/bundle-3-jars-rosewater-gift.webp'
-  };
-
-  function selectBundle(el){
-    bundles.forEach(b => { b.classList.remove('selected'); b.setAttribute('aria-checked','false'); });
-    el.classList.add('selected');
-    el.setAttribute('aria-checked','true');
-    summaryPrice.textContent = el.dataset.price;
-    sumPrice.textContent = el.dataset.price;
-    sumPack.textContent = window.packOrderName(el);
-    fBundle.value = window.packOrderName(el);
-    fPrice.value = el.dataset.price;
-
-    const img = document.getElementById('bundle-visual-img');
-    img.style.opacity = '0';
-    img.style.transform = 'scale(0.97)';
-    setTimeout(() => {
-      img.src = visualMap[el.dataset.id] || 'bundle of 2.png';
-      img.style.opacity = '1';
-      img.style.transform = 'scale(1)';
-    }, 200);
-  }
-  bundles.forEach(b => {
-    b.addEventListener('click', () => selectBundle(b));
-    b.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); selectBundle(b); } });
-  });
-
-  function gotoOrder(){
-    document.getElementById('order').scrollIntoView({ behavior:'smooth', block:'start' });
-    setTimeout(() => document.getElementById('f-name').focus({preventScroll:true}), 600);
-  }
-  document.getElementById('cta-order').addEventListener('click', gotoOrder);
-  document.querySelectorAll('[data-cta="bundle"]').forEach(b => b.addEventListener('click', () => {
-    document.getElementById('bundles-section').scrollIntoView({behavior:'smooth', block:'start'});
-  }));
-
-  const form = document.getElementById('order-form');
-  const successMsg = document.getElementById('success-msg');
-  function setError(name, hasErr){
-    const f = form.querySelector('.field[data-name="'+name+'"]');
-    if (!f) return;
-    f.classList.toggle('error', hasErr);
-  }
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    const name = document.getElementById('f-name').value.trim();
-    const phone = document.getElementById('f-phone').value.trim();
-    const city = document.getElementById('f-city').value.trim();
-    const notes = document.getElementById('f-notes').value.trim();
-    const phoneDigits = phone.replace(/\D/g,'');
-    const validName = name.length >= 2;
-    const validPhone = phoneDigits.length >= 9 && phoneDigits.length <= 13;
-    const validCity = city.length >= 2;
-    setError('name', !validName);
-    setError('phone', !validPhone);
-    setError('city', !validCity);
-    if (!(validName && validPhone && validCity)){
-      const firstErr = form.querySelector('.field.error');
-      if (firstErr) firstErr.scrollIntoView({ behavior:'smooth', block:'center' });
-      return;
-    }
-    const bundleName = fBundle.value;
-    const totalPrice = fPrice.value;
-    const lang = window.__sahriLang || 'en';
-    const notesLine = notes || '—';
-    var message;
-    if (lang === 'fr') {
-      message =
-`🛍️ Nouvelle commande — SAHRI BEAUTY
-
-Produit : poudre éclaircissante Nila — Dakhla
-Coffret : ${bundleName}
-Total : ${totalPrice} MAD
-
-👤 Nom : ${name}
-📞 Téléphone : ${phone}
-🏙️ Ville : ${city}
-📝 Demandes : ${notesLine}
-
-✅ Commande confirmée — paiement à la livraison`;
-    } else if (lang === 'darija') {
-      message =
-`🛍️ طلبية جديدة — SAHRI BEAUTY
-
-المنتج: مسحوق Nila للتفتيح — Dakhla
-الباك: ${bundleName}
-المجموع: ${totalPrice} درهم
-
-👤 السمية: ${name}
-📞 النمرة: ${phone}
-🏙️ المدينة: ${city}
-📝 ملاحظات: ${notesLine}
-
-✅ الطلبية تأكدات — الدفع عند الاستلام`;
-    } else {
-      message =
-`🛍️ New order - SAHRI BEAUTY
-
-Product: Nila Brightening Powder — Dakhla
-Selected pack: ${bundleName}
-Total: ${totalPrice} MAD
-
-👤 Name: ${name}
-📞 Phone: ${phone}
-🏙️ City: ${city}
-📝 Special requests: ${notesLine}
-
-✅ Order confirmed — Cash on delivery`;
-    }
-
-    const orderData = { bundle: bundleName, price: totalPrice, name, phone, city, notes };
-
-    // 1. Log to Google Sheets via GET no-cors (avoids CORS redirect issue with Apps Script)
-    fetch(SHEETS_URL + '?' + new URLSearchParams(orderData).toString(), { mode: 'no-cors' })
-      .catch(() => {});
-
-    // 2. Telegram notification (fire and forget)
-    var tgText;
-    if (lang === 'fr') {
-      tgText =
-`🛍️ *NOUVELLE COMMANDE — SAHRI BEAUTY*
-
-📦 Coffret : ${bundleName}
-💰 Total : ${totalPrice} MAD
-
-👤 Nom : ${name}
-📞 Téléphone : ${phone}
-🏙️ Ville : ${city}
-📝 Notes : ${notesLine}
-
-⏰ ${new Date().toLocaleString('fr-MA')}`;
-    } else if (lang === 'darija') {
-      tgText =
-`🛍️ *طلبية جديدة — SAHRI BEAUTY*
-
-📦 الباك: ${bundleName}
-💰 المجموع: ${totalPrice} درهم
-
-👤 السمية: ${name}
-📞 النمرة: ${phone}
-🏙️ المدينة: ${city}
-📝 ملاحظات: ${notesLine}
-
-⏰ ${new Date().toLocaleString('fr-MA')}`;
-    } else {
-      tgText =
-`🛍️ *NEW ORDER — SAHRI BEAUTY*
-
-📦 Pack: ${bundleName}
-💰 Total: ${totalPrice} MAD
-
-👤 Name: ${name}
-📞 Phone: ${phone}
-🏙️ City: ${city}
-📝 Notes: ${notesLine}
-
-⏰ ${new Date().toLocaleString('fr-MA')}`;
-    }
-    fetch('https://api.telegram.org/bot' + TELEGRAM_TOKEN + '/sendMessage', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: tgText })
-    }).catch(() => {});
-
-    // 3. Show success, then open WhatsApp
-    const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
-    successMsg.classList.add('show');
-    setTimeout(() => { window.open(url, '_blank', 'noopener'); }, 350);
-  });
-  ['name','phone','city'].forEach(n => {
-    const input = document.getElementById('f-'+n);
-    input && input.addEventListener('input', () => setError(n, false));
-  });
-})();
-</script>
-
-  <!-- SVG sprite for reuse -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <symbol id="corner-orn" viewBox="0 0 40 40">
-        <path d="M2 2 L20 2" stroke="currentColor" stroke-width="1" fill="none"/>
-        <path d="M2 2 L2 20" stroke="currentColor" stroke-width="1" fill="none"/>
-        <path d="M6 6 L16 6 L16 16 L6 16 Z" stroke="currentColor" stroke-width=".8" fill="none"/>
-        <circle cx="11" cy="11" r="1.6" fill="currentColor"/>
-        <path d="M2 24 L2 30 M24 2 L30 2" stroke="currentColor" stroke-width=".7" fill="none" opacity=".7"/>
-      </symbol>
-      <symbol id="diamond" viewBox="0 0 18 18">
-        <path d="M9 1 L17 9 L9 17 L1 9 Z" fill="none" stroke="currentColor" stroke-width="1"/>
-        <path d="M9 5 L13 9 L9 13 L5 9 Z" fill="currentColor"/>
-      </symbol>
-      <symbol id="floret" viewBox="0 0 18 18">
-        <path d="M9 1 C11 5 13 7 17 9 C13 11 11 13 9 17 C7 13 5 11 1 9 C5 7 7 5 9 1 Z" fill="currentColor"/>
-      </symbol>
-      <symbol id="star8" viewBox="0 0 24 24">
-        <path d="M12 1 L14 9 L22 5 L17 12 L23 16 L14 15 L12 23 L10 15 L1 16 L7 12 L2 5 L10 9 Z" fill="currentColor"/>
-      </symbol>
-    </defs>
-  </svg>
-
+  </script>
 </body>
 </html>
