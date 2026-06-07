@@ -76,8 +76,8 @@
     });
   });
 
-  /* Order form → WhatsApp */
-  document.getElementById('orderForm')?.addEventListener('submit', (e) => {
+  /* Order form → Supabase + WhatsApp */
+  document.getElementById('orderForm')?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const fd = new FormData(e.target);
     const product = fd.get('product') || 'Pack Rituel SAHRI SKIN';
@@ -87,6 +87,16 @@
     else if (packVal === '269') packLine = 'Pack standard — 269 MAD';
     else if (packVal) packLine = String(packVal);
 
+    let orderRef = '';
+    if (typeof window.SAHRI_submitOrderToDb === 'function') {
+      try {
+        const id = await window.SAHRI_submitOrderToDb(fd);
+        if (id) orderRef = '\nRef: ' + id;
+      } catch (err) {
+        console.warn('Order DB save failed:', err.message);
+      }
+    }
+
     const msg = [
       'Commande SAHRI SKIN',
       'Produit: ' + product,
@@ -95,11 +105,12 @@
       'Ville: ' + fd.get('city'),
       fd.get('scent') ? 'Parfum: ' + fd.get('scent') : '',
       packLine ? 'Format: ' + packLine : '',
-      fd.get('notes') ? 'Notes: ' + fd.get('notes') : ''
+      fd.get('notes') ? 'Notes: ' + fd.get('notes') : '',
+      orderRef
     ].filter(Boolean).join('\n');
 
     window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
-    alert('Merci — complète l\'envoi sur WhatsApp ou contacte @sahriskin sur Instagram.');
+    alert('Merci — commande enregistrée. Complète l\'envoi sur WhatsApp ou contacte @sahriskin.');
   });
 
   /* Counter animation */
