@@ -1,8 +1,8 @@
 /**
  * SAHRI SKIN — Supabase public config
- * Anon key: Supabase Dashboard → Project SAHRI → Settings → API → anon public
+ * Publishable key: Supabase Dashboard → Settings → API Keys → Publishable
  */
 window.SAHRI_CONFIG = {
   supabaseUrl: 'https://vmfkhspwnxbdxzthvuxv.supabase.co',
-  supabaseAnonKey: '' // ← paste your anon key here, then redeploy Cloudflare
+  supabaseAnonKey: 'sb_publishable_yY3ZS3-_ZlFOvDlBWuVBgQ_qbZyXZ7e'
 };
