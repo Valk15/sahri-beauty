@@ -7,19 +7,16 @@ URL: `https://vmfkhspwnxbdxzthvuxv.supabase.co`
 
 ## 1. Run the database migration (one time)
 
-**Option A — SQL Editor (recommended)**
+**If you got `relation "scents" already exists` — use the SAFE script:**
 
-1. Open [Supabase Dashboard](https://supabase.com/dashboard/project/vmfkhspwnxbdxzthvuxv/sql/new)
-2. Copy the full contents of:
-   `supabase/migrations/20260607120000_sahri_catalog_and_orders.sql`
-3. Click **Run**
+1. Open [SQL Editor](https://supabase.com/dashboard/project/vmfkhspwnxbdxzthvuxv/sql/new)
+2. Copy **`supabase/migrations/20260607130000_sahri_catalog_safe_rerun.sql`**
+3. Paste → **Run** (safe to run multiple times)
 
-**Option B — CLI (after `npx supabase login`)**
+You should see a result table at the bottom: scents=8, products=5, packs=1, pack_items=5.
 
-```bash
-npx supabase link --project-ref vmfkhspwnxbdxzthvuxv
-npx supabase db push
-```
+**First time (empty database) — either script works:**
+- `20260607120000_sahri_catalog_and_orders.sql` OR the safe rerun above.
 
 ---
 
