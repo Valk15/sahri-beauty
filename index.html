@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SAHRI SKIN — Ton corps. Ton parfum.</title>
-  <meta name="description" content="Pack rituel corps et cheveux personnalisé — Huile d'Amande Parfumée, Beurre Corporel 100g, diffuseur offert. Livraison COD au Maroc." />
+  <meta name="description" content="Pack rituel corps naturel personnalisé — Argan, Beurre Corporel, Gommages et savon offert. 269 MAD COD Maroc." />
   <link rel="icon" type="image/png" href="assets/favicon-sahri-skin.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,11 +13,11 @@
 </head>
 <body>
 
-  <div class="announce">Édition de lancement — quantités limitées · Livraison COD partout au Maroc</div>
+  <div class="announce">Offre de lancement — Pack Rituel v2 · Économise 137 MAD · Livraison COD partout au Maroc</div>
 
   <header class="nav">
     <div class="container nav-inner">
-      <a href="#" class="logo" aria-label="SAHRI SKIN accueil">
+      <a href="index.html" class="logo" aria-label="SAHRI SKIN accueil">
         <img src="assets/favicon-sahri-skin.png" alt="" width="52" height="52" />
         <span class="logo-text">
           <span class="logo-sahri">SAHRI</span>
@@ -26,9 +26,9 @@
       </a>
       <button class="nav-toggle" type="button" aria-label="Menu" id="navToggle">☰</button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#produits">Le pack</a></li>
-        <li><a href="#parfums">Parfums</a></li>
-        <li><a href="#resultats">Résultats</a></li>
+        <li><a href="pack/">Le pack</a></li>
+        <li><a href="#boutique">Produits</a></li>
+        <li><a href="pack/#parfums">Parfums</a></li>
         <li><a href="#commander">Commander</a></li>
         <li><a href="#commander" class="btn btn-primary" style="padding:10px 20px">Commander</a></li>
       </ul>
@@ -37,221 +37,211 @@
 
   <section class="hero">
     <div class="container hero-grid">
-      <div>
-        <span class="hero-badge">Nouveau · Maroc</span>
+      <div data-reveal>
+        <span class="hero-badge">Pack Rituel v2 · Maroc</span>
         <h1>Ton corps.<br /><em>Ton parfum.</em></h1>
         <p class="hero-lead">
-          Un pack rituel 100&nbsp;% naturel — <strong>Huile d'Amande Parfumée</strong>, beurre corporel et petit diffuseur offert.
-          Tu choisis ton parfum, tout sent pareil : peau, cheveux, moment.
+          Un rituel corps complet — <strong>5 produits naturels</strong> dans le parfum que tu choisis.
+          Argan corps &amp; cheveux, beurre corporel, gommages et petit savon offert.
         </p>
-        <p class="hero-price">299 MAD <span>· pack standard · paiement à la livraison</span></p>
+        <p class="hero-price">269 MAD <span>· pack standard · paiement à la livraison</span></p>
         <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px">
-          <a href="#commander" class="btn btn-primary">Commander en COD</a>
-          <a href="https://instagram.com/sahriskin" class="btn btn-outline" target="_blank" rel="noopener">@sahriskin</a>
+          <a href="pack/" class="btn btn-primary">Découvrir le pack</a>
+          <a href="#boutique" class="btn btn-outline">Voir les produits</a>
         </div>
       </div>
-      <div>
-        <img class="hero-img" src="assets/img/02-full-pack-100g.png" alt="Pack SAHRI SKIN ouvert avec Huile d'Amande Parfumée, Beurre Corporel et diffuseur" width="600" height="600" loading="eager" />
+      <div data-reveal>
+        <a href="pack/"><img class="hero-img" src="products/argan-parfumee-100ml/argan-parfumee-100ml-studio.png" alt="Pack Rituel SAHRI SKIN" width="600" height="600" loading="eager" style="background:#f8f8f8;padding:24px;object-fit:contain" /></a>
       </div>
     </div>
   </section>
 
-  <section id="produits" class="bg-white">
+  <!-- Boutique / Products -->
+  <section id="boutique" class="bg-white">
     <div class="container">
-      <p class="section-kicker">Le pack signature</p>
-      <h2 class="section-title">Trois produits. Un seul parfum. Le tien.</h2>
-      <p style="color:var(--muted);max-width:60ch">Chaque commande est préparée dans la fragrance que tu choisis. L'huile nourrit la peau et les cheveux. Le beurre scelle l'hydratation. Le diffuseur est le petit cadeau offert dans la box.</p>
+      <p class="section-kicker" data-reveal">Boutique</p>
+      <h2 class="section-title" data-reveal">Nos produits</h2>
+      <p style="color:var(--muted);max-width:58ch" data-reveal>Chaque produit fait partie du Pack Rituel — ou disponible en recharge individuelle, toujours dans ton parfum.</p>
 
-      <div class="products-grid">
-        <article class="product-card">
-          <img src="assets/img/huile-damande-parfumee.png" alt="Huile d'Amande Parfumée SAHRI SKIN 60ml couvercle spray or" loading="lazy" />
-          <div class="product-card-body">
-            <p class="size">60ml · spray</p>
-            <h3>Huile d'Amande Parfumée</h3>
-            <p>Huile d'amande marocaine parfumée dans ton aroma. Corps et cheveux — couvercle spray or, style parfum.</p>
+      <div class="catalog-grid" data-reveal data-stagger>
+        <article class="catalog-card">
+          <div class="badge-stack">
+            <span class="badge badge-gold">Best-seller</span>
+          </div>
+          <a href="products/argan-parfumee-100ml/" class="catalog-card-img">
+            <img src="products/argan-parfumee-100ml/argan-parfumee-100ml-studio.png" alt="Argan Parfumée" loading="lazy" />
+          </a>
+          <div class="catalog-card-body">
+            <h3><a href="products/argan-parfumee-100ml/">Argan Parfumée</a></h3>
+            <p>Huile naturelle corps &amp; cheveux — dans ta fragrance au choix.</p>
+            <p class="catalog-price">109 MAD</p>
+            <a href="products/argan-parfumee-100ml/" class="btn btn-outline">Voir le produit</a>
           </div>
         </article>
-        <article class="product-card">
-          <img src="assets/img/beurre-corporel-100g.png" alt="Beurre Corporel SAHRI SKIN 100g" loading="lazy" />
-          <div class="product-card-body">
-            <p class="size">100g</p>
-            <h3>Beurre Corporel</h3>
-            <p>Beurre riche, même parfum que l'huile. Après la douche, pour fixer la douceur sur la peau.</p>
+
+        <article class="catalog-card">
+          <div class="badge-stack">
+            <span class="badge badge-gold">Best-seller</span>
+          </div>
+          <a href="products/beurre-corporelle-200g/" class="catalog-card-img">
+            <img src="products/beurre-corporelle-200g/beurre-corporelle-200g-studio.png" alt="Beurre Corporel" loading="lazy" />
+          </a>
+          <div class="catalog-card-body">
+            <h3><a href="products/beurre-corporelle-200g/">Beurre Corporel</a></h3>
+            <p>Texture veloutée — scelle l'hydratation et prolonge ton parfum.</p>
+            <p class="catalog-price">119 MAD</p>
+            <a href="products/beurre-corporelle-200g/" class="btn btn-outline">Voir le produit</a>
           </div>
         </article>
-        <article class="product-card">
-          <img src="assets/img/diffuseur-rituel.png" alt="Diffuseur Rituel 30ml cadeau dans la box" loading="lazy" />
-          <div class="product-card-body">
-            <p class="size">30ml · cadeau</p>
-            <h3>Diffuseur Rituel</h3>
-            <p>Le petit cadeau offert dans la box — ambiance pendant ton rituel, pas un parfum de maison.</p>
+
+        <article class="catalog-card">
+          <div class="badge-stack">
+            <span class="badge badge-navy">Rituel</span>
+          </div>
+          <a href="products/gommage-corps-300g/" class="catalog-card-img">
+            <img src="products/gommage-corps-300g/gommage-corps-300g-studio.png" alt="Gommage Corps" loading="lazy" />
+          </a>
+          <div class="catalog-card-body">
+            <h3><a href="products/gommage-corps-300g/">Gommage Corps</a></h3>
+            <p>Exfoliation douce — prépare la peau à absorber le rituel.</p>
+            <p class="catalog-price">99 MAD</p>
+            <a href="products/gommage-corps-300g/" class="btn btn-outline">Voir le produit</a>
+          </div>
+        </article>
+
+        <article class="catalog-card">
+          <div class="badge-stack">
+            <span class="badge badge-gold">UGC favorite</span>
+          </div>
+          <a href="products/gommage-levres-30g/" class="catalog-card-img">
+            <img src="products/gommage-levres-30g/gommage-levres-30g-studio.png" alt="Gommage à Lèvres" loading="lazy" />
+          </a>
+          <div class="catalog-card-body">
+            <h3><a href="products/gommage-levres-30g/">Gommage à Lèvres</a></h3>
+            <p>Exfolie et adoucit — le soin lèvres du rituel.</p>
+            <p class="catalog-price">79 MAD</p>
+            <a href="products/gommage-levres-30g/" class="btn btn-outline">Voir le produit</a>
+          </div>
+        </article>
+
+        <article class="catalog-card">
+          <div class="badge-stack">
+            <span class="badge badge-gift">🎁 Offert</span>
+          </div>
+          <a href="products/petit-savon-cadeau/" class="catalog-card-img">
+            <img src="products/petit-savon-cadeau/petit-savon-cadeau-studio.png" alt="Petit Savon cadeau" loading="lazy" />
+          </a>
+          <div class="catalog-card-body">
+            <h3><a href="products/petit-savon-cadeau/">Petit Savon</a></h3>
+            <p>Le cadeau surprise dans chaque pack — parfumé dans ton scent.</p>
+            <p class="catalog-price"><span class="free">Inclus dans le pack</span></p>
+            <a href="products/petit-savon-cadeau/" class="btn btn-outline">En savoir plus</a>
+          </div>
+        </article>
+
+        <article class="catalog-card" style="border:2px solid var(--gold)">
+          <div class="badge-stack">
+            <span class="badge badge-offer">Offre pack</span>
+            <span class="badge badge-gold">-137 MAD</span>
+          </div>
+          <a href="pack/" class="catalog-card-img" style="background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%)">
+            <img src="products/beurre-corporelle-200g/beurre-corporelle-200g-studio.png" alt="Pack Rituel" loading="lazy" style="mix-blend-mode:normal" />
+          </a>
+          <div class="catalog-card-body">
+            <h3><a href="pack/">Pack Rituel v2</a></h3>
+            <p>Les 5 produits dans ton parfum — rituel corps complet.</p>
+            <p class="catalog-price"><span class="was">406 MAD</span> 269 MAD</p>
+            <a href="pack/" class="btn btn-gold">Voir le pack →</a>
           </div>
         </article>
       </div>
 
-      <div class="scarcity-banner">
-        <img src="assets/img/09-scarcite-edition-limitee.png" alt="Édition de lancement SAHRI SKIN quantités limitées" loading="lazy" />
+      <div class="pack-promo" data-reveal>
+        <div>
+          <h3>Pack Rituel SAHRI SKIN — Offre de lancement</h3>
+          <p>5 produits naturels personnalisés dans ton parfum. Économise 137 MAD par rapport à l'achat séparé. Fin de l'offre édition limitée — quantités restreintes.</p>
+        </div>
+        <div class="pack-promo-price">
+          <span class="amount">269 MAD</span>
+          <span class="save">Économie <span data-count="137">0</span> MAD</span>
+          <a href="pack/#commander" class="btn btn-gold" style="margin-top:16px;display:inline-flex">Commander</a>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="parfums">
     <div class="container">
-      <p class="section-kicker">Personnalisation</p>
-      <h2 class="section-title">Choisis ton parfum</h2>
-      <p style="color:var(--muted)">8 fragrances au lancement — ton huile et ton beurre arrivent dans le même parfum.</p>
-
-      <div class="scents-grid" id="scentGrid">
-        <div class="scent-card" data-scent="Fruits Rouges"><h4>Fruits Rouges</h4><p>Baies rouges, fleurs fraîches, musc léger</p></div>
-        <div class="scent-card" data-scent="Vanille Dorée"><h4>Vanille Dorée</h4><p>Vanille riche, ambre chaud, caramel</p></div>
-        <div class="scent-card" data-scent="Musc Blanc"><h4>Musc Blanc</h4><p>Musc blanc, peau propre, doux</p></div>
-        <div class="scent-card" data-scent="Nuit Noire"><h4>Nuit Noire</h4><p>Café floral, vanille, patchouli</p></div>
-        <div class="scent-card" data-scent="Rose Satinee"><h4>Rose Satinee</h4><p>Rose, pivoine, musc</p></div>
-        <div class="scent-card" data-scent="Coco Velours"><h4>Coco Velours</h4><p>Noix de coco, vanille, tropical</p></div>
-        <div class="scent-card" data-scent="Ambre Doux"><h4>Ambre Doux</h4><p>Ambre, bois de santal, oud léger</p></div>
+      <p class="section-kicker" data-reveal">Personnalisation</p>
+      <h2 class="section-title" data-reveal>8 parfums au choix</h2>
+      <p style="color:var(--muted)" data-reveal>Tous les produits du pack arrivent dans la même fragrance — <a href="pack/#parfums" style="color:var(--gold)">choisir sur la page pack →</a></p>
+      <div class="scents-grid" data-reveal data-stagger>
+        <div class="scent-card" data-scent="Fruits Rouges"><h4>Fruits Rouges</h4><p>Baies rouges, fleurs fraîches</p></div>
+        <div class="scent-card" data-scent="Vanille Dorée"><h4>Vanille Dorée</h4><p>Vanille, ambre, caramel</p></div>
+        <div class="scent-card" data-scent="Musc Blanc"><h4>Musc Blanc</h4><p>Musc propre, peau nue</p></div>
+        <div class="scent-card" data-scent="Nuit Noire"><h4>Nuit Noire</h4><p>Floral foncé, patchouli</p></div>
+        <div class="scent-card" data-scent="Rose Satinée"><h4>Rose Satinée</h4><p>Rose, pivoine, musc</p></div>
+        <div class="scent-card" data-scent="Coco Velours"><h4>Coco Velours</h4><p>Coco, vanille, tropical</p></div>
+        <div class="scent-card" data-scent="Ambre Doux"><h4>Ambre Doux</h4><p>Ambre, santal, oud léger</p></div>
         <div class="scent-card" data-scent="Jasmin Soleil"><h4>Jasmin Soleil</h4><p>Jasmin, bergamote, frais</p></div>
       </div>
-
-      <p style="margin-top:28px;text-align:center">
-        <img src="assets/img/06-notes-parfums-8-scents.png" alt="Menu des 8 parfums SAHRI SKIN" style="margin:0 auto;border-radius:var(--radius);box-shadow:var(--shadow)" loading="lazy" />
-      </p>
     </div>
   </section>
 
   <section class="bg-navy" id="avantages">
     <div class="container">
-      <p class="section-kicker">Pourquoi SAHRI SKIN</p>
-      <h2 class="section-title">Naturel. Personnalisé. Complet.</h2>
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <h3>Naturel</h3>
-          <p>Huile d'amande marocaine et beurre corporel sans remplissage synthétique — qualité qu'on sent.</p>
-        </div>
-        <div class="benefit-card">
-          <h3>Personnalisé</h3>
-          <p>Tu choisis ton parfum. Ton huile parfumée et ton beurre arrivent dans ta fragrance.</p>
-        </div>
-        <div class="benefit-card">
-          <h3>Complet</h3>
-          <p>Rituel corps et cheveux. Le diffuseur offert complète l'expérience cadeau.</p>
-        </div>
+      <p class="section-kicker" data-reveal">Pourquoi SAHRI SKIN</p>
+      <h2 class="section-title" data-reveal">Naturel. Personnalisé. Complet.</h2>
+      <div class="benefits-grid" data-reveal data-stagger>
+        <div class="benefit-card"><h3>Rituel système</h3><p>Gommer, nourrir, sceller — chaque produit prépare le suivant dans le même parfum.</p></div>
+        <div class="benefit-card"><h3>Personnalisé</h3><p>8 fragrances — ton pack entier sent la fragrance que tu as choisie.</p></div>
+        <div class="benefit-card"><h3>Accessible</h3><p>269 MAD COD — rituel corps premium sans prix inaccessible.</p></div>
       </div>
-      <p style="margin-top:32px;text-align:center">
-        <img src="assets/img/07-avantages-pack.png" alt="Avantages du pack SAHRI SKIN" style="margin:0 auto;max-width:900px;border-radius:var(--radius)" loading="lazy" />
-      </p>
-    </div>
-  </section>
-
-  <section id="resultats" class="bg-white">
-    <div class="container">
-      <p class="section-kicker">Résultats</p>
-      <h2 class="section-title">Avant et après le rituel</h2>
-      <div class="gallery-2">
-        <img src="assets/img/04-avant-apres-peau.png" alt="Avant après peau hydratée SAHRI SKIN" loading="lazy" />
-        <img src="assets/img/05-avant-apres-cheveux.png" alt="Avant après cheveux brillants Huile d'Amande Parfumée" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <section id="rituel">
-    <div class="container">
-      <p class="section-kicker">Le rituel</p>
-      <h2 class="section-title">Corps et cheveux, même parfum</h2>
-      <div class="gallery-3">
-        <img src="assets/img/03-hero-rituel-corps.png" alt="Rituel corps huile d'amande parfumée" loading="lazy" />
-        <img src="assets/img/10-rituel-huile-cheveux.png" alt="Huile d'Amande Parfumée sur les cheveux" loading="lazy" />
-        <img src="assets/img/08-rituel-beurre-artistique.png" alt="Beurre corporel après la douche" loading="lazy" />
-      </div>
-      <p style="margin-top:24px;text-align:center;color:var(--muted);font-size:0.95rem">
-        Après la douche : huile sur peau humide, beurre par-dessus, quelques pulvérisations dans les cheveux.
-      </p>
-      <div class="gallery-2" style="margin-top:32px">
-        <img src="assets/img/11-texture-detail-produits.png" alt="Texture beurre et huile SAHRI SKIN" loading="lazy" />
-        <img src="assets/img/13-ugc-huile-spray-cap.png" alt="UGC Huile d'Amande Parfumée couvercle spray" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <section id="cadeau" class="bg-cream" style="background:var(--cream-dark)">
-    <div class="container">
-      <p class="section-kicker">Offrir</p>
-      <h2 class="section-title">Le cadeau qu'elle choisit elle-même</h2>
-      <p style="color:var(--muted);max-width:55ch;margin-bottom:24px">Version gift box 349 MAD — ruban, papier de soie et carte message. Elle choisit son parfum, tu commandes le pack.</p>
-      <img src="assets/img/12-cadeau-gift-box.png" alt="Pack cadeau SAHRI SKIN avec ruban" style="border-radius:var(--radius);box-shadow:var(--shadow);max-width:800px;margin:0 auto" loading="lazy" />
     </div>
   </section>
 
   <section id="commander" class="order-section">
     <div class="container order-grid">
-      <div>
+      <div data-reveal>
         <p class="section-kicker">Commander</p>
         <h2 class="section-title">Paiement à la livraison</h2>
-        <p style="color:var(--muted)">Remplis le formulaire — nous te contactons pour confirmer ton parfum et ton adresse. Livraison via Amana, paiement à la réception.</p>
+        <p style="color:var(--muted)">Pack Rituel v2 recommandé — ou recharge produit individuelle. Confirmation par WhatsApp.</p>
         <ul style="margin-top:24px;padding-left:1.2em;color:var(--navy)">
-          <li>Pack standard — <strong>299 MAD</strong></li>
-          <li>Gift box (ruban + carte) — <strong>349 MAD</strong></li>
-          <li>Huile d'Amande Parfumée · Beurre 100g · Diffuseur 30ml offert</li>
+          <li>Pack standard — <strong>269 MAD</strong></li>
+          <li>Gift box — <strong>319 MAD</strong></li>
+          <li>Recharges : Argan 109 · Beurre 119 · Gommage 99 · Lèvres 79 MAD</li>
         </ul>
       </div>
-
-      <form class="order-form" id="orderForm">
-        <div class="form-group">
-          <label for="name">Nom complet</label>
-          <input type="text" id="name" name="name" required autocomplete="name" />
-        </div>
-        <div class="form-group">
-          <label for="phone">Téléphone WhatsApp</label>
-          <input type="tel" id="phone" name="phone" required placeholder="06 XX XX XX XX" />
-        </div>
-        <div class="form-group">
-          <label for="city">Ville</label>
-          <input type="text" id="city" name="city" required placeholder="Casablanca, Rabat…" />
-        </div>
-        <div class="form-group">
-          <label for="scent">Parfum choisi</label>
+      <form class="order-form" id="orderForm" data-reveal>
+        <input type="hidden" name="product" value="Pack Rituel SAHRI SKIN v2" />
+        <div class="form-group"><label for="name">Nom complet</label><input type="text" id="name" name="name" required autocomplete="name" /></div>
+        <div class="form-group"><label for="phone">Téléphone WhatsApp</label><input type="tel" id="phone" name="phone" required placeholder="06 XX XX XX XX" /></div>
+        <div class="form-group"><label for="city">Ville</label><input type="text" id="city" name="city" required placeholder="Casablanca, Rabat…" /></div>
+        <div class="form-group"><label for="scent">Parfum choisi</label>
           <select id="scent" name="scent" required>
             <option value="">— Sélectionner —</option>
-            <option>Fruits Rouges</option>
-            <option>Vanille Dorée</option>
-            <option>Musc Blanc</option>
-            <option>Nuit Noire</option>
-            <option>Rose Satinee</option>
-            <option>Coco Velours</option>
-            <option>Ambre Doux</option>
-            <option>Jasmin Soleil</option>
+            <option>Fruits Rouges</option><option>Vanille Dorée</option><option>Musc Blanc</option><option>Nuit Noire</option>
+            <option>Rose Satinée</option><option>Coco Velours</option><option>Ambre Doux</option><option>Jasmin Soleil</option>
           </select>
         </div>
-        <div class="form-group">
-          <label>Format</label>
+        <div class="form-group"><label>Format</label>
           <div class="pack-options">
-            <label class="pack-option">
-              <input type="radio" name="pack" value="299" checked />
-              <span>Pack standard — 299 MAD</span>
-            </label>
-            <label class="pack-option">
-              <input type="radio" name="pack" value="349" />
-              <span>Gift box — 349 MAD</span>
-            </label>
+            <label class="pack-option"><input type="radio" name="pack" value="269" checked /><span>Pack standard — 269 MAD</span></label>
+            <label class="pack-option"><input type="radio" name="pack" value="319" /><span>Gift box — 319 MAD</span></label>
           </div>
         </div>
-        <div class="form-group">
-          <label for="notes">Message (optionnel)</label>
-          <textarea id="notes" name="notes" rows="3" placeholder="Adresse, occasion cadeau…"></textarea>
-        </div>
+        <div class="form-group"><label for="notes">Message (optionnel)</label><textarea id="notes" name="notes" rows="3" placeholder="Produit individuel, adresse…"></textarea></div>
         <button type="submit" class="btn btn-gold" style="width:100%">Envoyer ma commande</button>
-        <p style="font-size:0.75rem;color:var(--muted);margin-top:12px;text-align:center">Ou écris-nous sur Instagram <a href="https://instagram.com/sahriskin" style="color:var(--gold)">@sahriskin</a></p>
+        <p style="font-size:0.75rem;color:var(--muted);margin-top:12px;text-align:center">Ou <a href="https://instagram.com/sahriskin" style="color:var(--gold)">@sahriskin</a></p>
       </form>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container">
-      <a href="#" class="logo" style="justify-content:center;margin-bottom:8px">
+      <a href="index.html" class="logo" style="justify-content:center;margin-bottom:8px">
         <img src="assets/favicon-sahri-skin.png" alt="" width="48" height="48" />
-        <span class="logo-text">
-          <span class="logo-sahri">SAHRI</span>
-          <span class="logo-skin">SKIN</span>
-        </span>
+        <span class="logo-text"><span class="logo-sahri">SAHRI</span><span class="logo-skin">SKIN</span></span>
       </a>
       <p class="footer-tagline">Ton corps. Ton parfum.</p>
       <p>© 2026 SAHRI SKIN · Maroc · Livraison COD</p>
@@ -259,39 +249,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('navToggle')?.addEventListener('click', () => {
-      document.querySelector('.nav').classList.toggle('open');
-    });
-
-    const scentSelect = document.getElementById('scent');
-    document.querySelectorAll('.scent-card').forEach((card) => {
-      card.addEventListener('click', () => {
-        document.querySelectorAll('.scent-card').forEach((c) => c.classList.remove('selected'));
-        card.classList.add('selected');
-        const name = card.dataset.scent;
-        if (scentSelect) scentSelect.value = name;
-      });
-    });
-
-    document.getElementById('orderForm')?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const fd = new FormData(e.target);
-      const pack = fd.get('pack') === '349' ? 'Gift box 349 MAD' : 'Pack standard 299 MAD';
-      const msg = [
-        'Commande SAHRI SKIN',
-        'Nom: ' + fd.get('name'),
-        'Tel: ' + fd.get('phone'),
-        'Ville: ' + fd.get('city'),
-        'Parfum: ' + fd.get('scent'),
-        'Pack: ' + pack,
-        fd.get('notes') ? 'Notes: ' + fd.get('notes') : ''
-      ].filter(Boolean).join('\n');
-
-      const wa = 'https://wa.me/?text=' + encodeURIComponent(msg);
-      window.open(wa, '_blank');
-      alert('Merci — complète l\'envoi sur WhatsApp ou contacte @sahriskin sur Instagram.');
-    });
-  </script>
+  <script src="js/site.js"></script>
 </body>
 </html>

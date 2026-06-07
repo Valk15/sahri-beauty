@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Argan Parfumée — SAHRI SKIN</title>
+  <meta name="description" content="Huile argan naturelle corps et cheveux, parfumée dans ta fragrance au choix. SAHRI SKIN — Maroc COD." />
+  <link rel="icon" type="image/png" href="../../assets/favicon-sahri-skin.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="announce">Livraison COD partout au Maroc · @sahriskin</div>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="../../index.html" class="logo"><img src="../../assets/favicon-sahri-skin.png" alt="" width="52" height="52" /><span class="logo-text"><span class="logo-sahri">SAHRI</span><span class="logo-skin">SKIN</span></span></a>
+      <button class="nav-toggle" type="button" id="navToggle" aria-label="Menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="../../pack/">Le pack</a></li>
+        <li><a href="../../index.html#boutique">Produits</a></li>
+        <li><a href="#commander" class="btn btn-primary" style="padding:10px 20px">Commander</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="product-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="../../index.html">Accueil</a> · <a href="../../index.html#boutique">Produits</a> · Argan Parfumée</p>
+      <div class="product-hero-grid">
+        <div class="product-hero-img" data-reveal>
+          <img src="argan-parfumee-100ml-studio.png" alt="Argan Parfumée SAHRI SKIN" width="400" height="400" />
+        </div>
+        <div data-reveal>
+          <div class="product-meta">
+            <span class="badge badge-gold">Best-seller</span>
+            <span class="badge badge-navy">Corps &amp; cheveux</span>
+          </div>
+          <h1>Argan Parfumée — Corps &amp; Cheveux</h1>
+          <p class="product-tagline">Huile corps &amp; cheveux — dans ton parfum</p>
+          <p class="product-lead">Une huile légère qui nourrit ta peau et tes cheveux — dans le parfum que tu as choisi. Un seul produit, deux usages. Corps. Cheveux. Ton parfum.</p>
+          <div class="product-price-block">
+            <p class="price">109 MAD</p>
+            <p class="note">Recharge individuelle · ou inclus dans le Pack Rituel à 269 MAD</p>
+          </div>
+          <div class="product-actions">
+            <a href="#commander" class="btn btn-primary">Commander en COD</a>
+            <a href="../../pack/" class="btn btn-outline">Voir le pack complet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="container">
+      <p class="section-kicker">Description</p>
+      <h2 class="section-title">Le cœur du rituel</h2>
+      <p style="color:var(--muted);max-width:65ch" data-reveal>L'Argan Parfumée SAHRI SKIN est enrichie à l'huile d'argan marocaine, infusée dans ta fragrance sélectionnée. Elle s'absorbe rapidement sur la peau encore humide après la douche, et quelques gouttes suffisent pour nourrir les cheveux — brillance naturelle, légèreté, sans alourdir.</p>
+      <div class="detail-grid" data-reveal data-stagger>
+        <div class="detail-box"><h3>Bénéfices</h3><ul><li>Nourrit et hydrate la peau</li><li>Brillance et légèreté cheveux</li><li>Absorption rapide — pas de film gras</li><li>Signature olfactive personnelle</li></ul></div>
+        <div class="detail-box"><h3>Mode d'emploi</h3><ul><li><strong>Corps :</strong> après la douche, sur peau humide</li><li><strong>Cheveux :</strong> 2–3 pressions sur longueurs</li><li>Ne pas appliquer sur le cuir chevelu</li></ul></div>
+        <div class="detail-box"><h3>Ingrédients clés</h3><ul><li>Huile d'argan marocaine</li><li>Huile de tournesol</li><li>Fragrance cosmétique (8 parfums)</li><li>Sans parabènes, sans sulfates</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="commander" class="order-section">
+    <div class="container order-grid">
+      <div data-reveal>
+        <p class="section-kicker">Commander</p>
+        <h2 class="section-title">Choisis ton parfum</h2>
+        <p style="color:var(--muted)">Vendu uniquement en variant parfum — sélection obligatoire. Livraison COD via Amana.</p>
+      </div>
+      <form class="order-form" id="orderForm" data-reveal>
+        <input type="hidden" name="product" value="Argan Parfumée — 109 MAD" />
+        <div class="form-group"><label for="name">Nom complet</label><input type="text" id="name" name="name" required /></div>
+        <div class="form-group"><label for="phone">Téléphone WhatsApp</label><input type="tel" id="phone" name="phone" required placeholder="06 XX XX XX XX" /></div>
+        <div class="form-group"><label for="city">Ville</label><input type="text" id="city" name="city" required /></div>
+        <div class="form-group"><label for="scent">Parfum choisi</label>
+          <select id="scent" name="scent" required>
+            <option value="">— Sélectionner —</option>
+            <option>Fruits Rouges</option><option>Vanille Dorée</option><option>Musc Blanc</option><option>Nuit Noire</option>
+            <option>Rose Satinée</option><option>Coco Velours</option><option>Ambre Doux</option><option>Jasmin Soleil</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width:100%">Envoyer ma commande</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">Ton corps. Ton parfum.</p>
+      <p>© 2026 SAHRI SKIN · Maroc · @sahriskin</p>
+    </div>
+  </footer>
+  <script src="../../js/site.js"></script>
+</body>
+</html>
